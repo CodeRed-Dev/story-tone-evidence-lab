@@ -1,0 +1,2182 @@
+{
+  "condition_languages": {
+    "monolingual/en-a": {
+      "affective_proxy_coverage": {
+        "recognized_token_count": 0,
+        "sentence_count": 6
+      },
+      "arc_distribution": {
+        "counts": {
+          "Cinderella": 0,
+          "Double Man in Hole": 0,
+          "Icarus": 0,
+          "Man in Hole": 0,
+          "Oedipus": 0,
+          "Rags to Riches": 0,
+          "Riches to Rags": 1
+        },
+        "entropy": 0.0,
+        "normalized_entropy": 0.0,
+        "probabilities": {
+          "Cinderella": 0.0,
+          "Double Man in Hole": 0.0,
+          "Icarus": 0.0,
+          "Man in Hole": 0.0,
+          "Oedipus": 0.0,
+          "Rags to Riches": 0.0,
+          "Riches to Rags": 1.0
+        },
+        "sample_count": 1
+      },
+      "discourse_features": {
+        "mean_agency_markers_per_100_tokens": 0.0,
+        "mean_arousal_range": 0.0,
+        "mean_flattening_proxy": 0.0,
+        "mean_negative_vad_rate": 0.0,
+        "mean_positive_vad_rate": 0.0,
+        "mean_suspense_proxy": 0.0,
+        "mean_tension_markers_per_100_tokens": 0.0,
+        "mean_valence_range": 0.0
+      },
+      "lexical_diversity": {
+        "corpus_distinct_1": 0.6201550387596899,
+        "corpus_distinct_2": 0.90625,
+        "corpus_token_entropy": 4.0420232726635925,
+        "mean_story_token_count": 129.0,
+        "mean_story_type_token_ratio": 0.6201550387596899,
+        "pairwise_bigram_jaccard_distance": 0.0,
+        "pairwise_token_jaccard_distance": 0.0,
+        "sample_count": 1
+      },
+      "mean_affective_curve": {
+        "arousal": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "valence": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ]
+      },
+      "plot_diversity": {
+        "duplicate_signature_count": 0,
+        "duplicate_signature_rate": 0.0,
+        "normalized_signature_entropy": 0.0,
+        "sample_count": 1,
+        "signature_entropy": 0.0,
+        "top_signatures": [
+          {
+            "count": 1,
+            "signature": "Riches to Rags|single_track|linear|low_tension|low_agency|low_resolution"
+          }
+        ],
+        "unique_signature_count": 1
+      },
+      "sample_count": 1,
+      "turning_points": {
+        "mean_normalized_position": {
+          "tp1": 0.3333333333333333,
+          "tp2": 0.5,
+          "tp3": 0.6666666666666666,
+          "tp4": 1.0,
+          "tp5": 0.8333333333333334
+        },
+        "ordering_violation_count": 1,
+        "ordering_violation_rate": 1.0,
+        "sample_count": 1,
+        "std_normalized_position": {
+          "tp1": 0.0,
+          "tp2": 0.0,
+          "tp3": 0.0,
+          "tp4": 0.0,
+          "tp5": 0.0
+        }
+      },
+      "warning_count": 1
+    },
+    "monolingual/en-b": {
+      "affective_proxy_coverage": {
+        "recognized_token_count": 2,
+        "sentence_count": 6
+      },
+      "arc_distribution": {
+        "counts": {
+          "Cinderella": 0,
+          "Double Man in Hole": 0,
+          "Icarus": 0,
+          "Man in Hole": 0,
+          "Oedipus": 0,
+          "Rags to Riches": 0,
+          "Riches to Rags": 1
+        },
+        "entropy": 0.0,
+        "normalized_entropy": 0.0,
+        "probabilities": {
+          "Cinderella": 0.0,
+          "Double Man in Hole": 0.0,
+          "Icarus": 0.0,
+          "Man in Hole": 0.0,
+          "Oedipus": 0.0,
+          "Rags to Riches": 0.0,
+          "Riches to Rags": 1.0
+        },
+        "sample_count": 1
+      },
+      "discourse_features": {
+        "mean_agency_markers_per_100_tokens": 0.0,
+        "mean_arousal_range": 0.16999999999999993,
+        "mean_flattening_proxy": 0.45598039215686276,
+        "mean_negative_vad_rate": 0.5,
+        "mean_positive_vad_rate": 0.5,
+        "mean_suspense_proxy": 0.007352941176470588,
+        "mean_tension_markers_per_100_tokens": 0.7352941176470589,
+        "mean_valence_range": 0.8
+      },
+      "lexical_diversity": {
+        "corpus_distinct_1": 0.6985294117647058,
+        "corpus_distinct_2": 0.9629629629629629,
+        "corpus_token_entropy": 4.315454932308885,
+        "mean_story_token_count": 136.0,
+        "mean_story_type_token_ratio": 0.6985294117647058,
+        "pairwise_bigram_jaccard_distance": 0.0,
+        "pairwise_token_jaccard_distance": 0.0,
+        "sample_count": 1
+      },
+      "mean_affective_curve": {
+        "arousal": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.511578947368421,
+          0.5694736842105264,
+          0.6273684210526316,
+          0.6852631578947368,
+          0.6968421052631579,
+          0.6389473684210527,
+          0.5810526315789473,
+          0.523157894736842,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5105263157894737,
+          0.5236842105263158,
+          0.5368421052631579,
+          0.55
+        ],
+        "valence": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5252631578947368,
+          0.651578947368421,
+          0.7778947368421053,
+          0.9042105263157895,
+          0.9294736842105263,
+          0.8031578947368422,
+          0.6768421052631578,
+          0.5505263157894736,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.4326315789473685,
+          0.3484210526315789,
+          0.26421052631578956,
+          0.18
+        ]
+      },
+      "plot_diversity": {
+        "duplicate_signature_count": 0,
+        "duplicate_signature_rate": 0.0,
+        "normalized_signature_entropy": 0.0,
+        "sample_count": 1,
+        "signature_entropy": 0.0,
+        "top_signatures": [
+          {
+            "count": 1,
+            "signature": "Riches to Rags|single_track|linear|tension|low_agency|resolution"
+          }
+        ],
+        "unique_signature_count": 1
+      },
+      "sample_count": 1,
+      "turning_points": {
+        "mean_normalized_position": {
+          "tp1": 0.16666666666666666,
+          "tp2": 0.3333333333333333,
+          "tp3": 0.5,
+          "tp4": 0.6666666666666666,
+          "tp5": 0.8333333333333334
+        },
+        "ordering_violation_count": 0,
+        "ordering_violation_rate": 0.0,
+        "sample_count": 1,
+        "std_normalized_position": {
+          "tp1": 0.0,
+          "tp2": 0.0,
+          "tp3": 0.0,
+          "tp4": 0.0,
+          "tp5": 0.0
+        }
+      },
+      "warning_count": 0
+    },
+    "monolingual/en-c": {
+      "affective_proxy_coverage": {
+        "recognized_token_count": 0,
+        "sentence_count": 7
+      },
+      "arc_distribution": {
+        "counts": {
+          "Cinderella": 0,
+          "Double Man in Hole": 0,
+          "Icarus": 0,
+          "Man in Hole": 0,
+          "Oedipus": 0,
+          "Rags to Riches": 0,
+          "Riches to Rags": 1
+        },
+        "entropy": 0.0,
+        "normalized_entropy": 0.0,
+        "probabilities": {
+          "Cinderella": 0.0,
+          "Double Man in Hole": 0.0,
+          "Icarus": 0.0,
+          "Man in Hole": 0.0,
+          "Oedipus": 0.0,
+          "Rags to Riches": 0.0,
+          "Riches to Rags": 1.0
+        },
+        "sample_count": 1
+      },
+      "discourse_features": {
+        "mean_agency_markers_per_100_tokens": 0.0,
+        "mean_arousal_range": 0.0,
+        "mean_flattening_proxy": 0.0,
+        "mean_negative_vad_rate": 0.0,
+        "mean_positive_vad_rate": 0.0,
+        "mean_suspense_proxy": 0.0,
+        "mean_tension_markers_per_100_tokens": 0.0,
+        "mean_valence_range": 0.0
+      },
+      "lexical_diversity": {
+        "corpus_distinct_1": 0.6063829787234043,
+        "corpus_distinct_2": 0.9572192513368984,
+        "corpus_token_entropy": 4.426584526325324,
+        "mean_story_token_count": 188.0,
+        "mean_story_type_token_ratio": 0.6063829787234043,
+        "pairwise_bigram_jaccard_distance": 0.0,
+        "pairwise_token_jaccard_distance": 0.0,
+        "sample_count": 1
+      },
+      "mean_affective_curve": {
+        "arousal": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "valence": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ]
+      },
+      "plot_diversity": {
+        "duplicate_signature_count": 0,
+        "duplicate_signature_rate": 0.0,
+        "normalized_signature_entropy": 0.0,
+        "sample_count": 1,
+        "signature_entropy": 0.0,
+        "top_signatures": [
+          {
+            "count": 1,
+            "signature": "Riches to Rags|single_track|linear|low_tension|low_agency|low_resolution"
+          }
+        ],
+        "unique_signature_count": 1
+      },
+      "sample_count": 1,
+      "turning_points": {
+        "mean_normalized_position": {
+          "tp1": 0.2857142857142857,
+          "tp2": 1.0,
+          "tp3": 0.14285714285714285,
+          "tp4": 0.7142857142857143,
+          "tp5": 0.14285714285714285
+        },
+        "ordering_violation_count": 1,
+        "ordering_violation_rate": 1.0,
+        "sample_count": 1,
+        "std_normalized_position": {
+          "tp1": 0.0,
+          "tp2": 0.0,
+          "tp3": 0.0,
+          "tp4": 0.0,
+          "tp5": 0.0
+        }
+      },
+      "warning_count": 1
+    },
+    "multicultural/en": {
+      "affective_proxy_coverage": {
+        "recognized_token_count": 1,
+        "sentence_count": 7
+      },
+      "arc_distribution": {
+        "counts": {
+          "Cinderella": 0,
+          "Double Man in Hole": 0,
+          "Icarus": 0,
+          "Man in Hole": 0,
+          "Oedipus": 0,
+          "Rags to Riches": 0,
+          "Riches to Rags": 1
+        },
+        "entropy": 0.0,
+        "normalized_entropy": 0.0,
+        "probabilities": {
+          "Cinderella": 0.0,
+          "Double Man in Hole": 0.0,
+          "Icarus": 0.0,
+          "Man in Hole": 0.0,
+          "Oedipus": 0.0,
+          "Rags to Riches": 0.0,
+          "Riches to Rags": 1.0
+        },
+        "sample_count": 1
+      },
+      "discourse_features": {
+        "mean_agency_markers_per_100_tokens": 0.0,
+        "mean_arousal_range": 0.0,
+        "mean_flattening_proxy": 0.6236559139784946,
+        "mean_negative_vad_rate": 1.0,
+        "mean_positive_vad_rate": 0.0,
+        "mean_suspense_proxy": 0.0064516129032258064,
+        "mean_tension_markers_per_100_tokens": 0.6451612903225806,
+        "mean_valence_range": 0.0
+      },
+      "lexical_diversity": {
+        "corpus_distinct_1": 0.6516129032258065,
+        "corpus_distinct_2": 0.9415584415584416,
+        "corpus_token_entropy": 4.3241137109866745,
+        "mean_story_token_count": 155.0,
+        "mean_story_type_token_ratio": 0.6516129032258065,
+        "pairwise_bigram_jaccard_distance": 0.0,
+        "pairwise_token_jaccard_distance": 0.0,
+        "sample_count": 1
+      },
+      "mean_affective_curve": {
+        "arousal": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5236842105263158,
+          0.5710526315789475,
+          0.618421052631579,
+          0.6342105263157894,
+          0.5868421052631578,
+          0.5394736842105263,
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "valence": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.4336842105263158,
+          0.3010526315789473,
+          0.16842105263157903,
+          0.12421052631578962,
+          0.2568421052631581,
+          0.38947368421052614,
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ]
+      },
+      "plot_diversity": {
+        "duplicate_signature_count": 0,
+        "duplicate_signature_rate": 0.0,
+        "normalized_signature_entropy": 0.0,
+        "sample_count": 1,
+        "signature_entropy": 0.0,
+        "top_signatures": [
+          {
+            "count": 1,
+            "signature": "Riches to Rags|single_track|linear|tension|low_agency|low_resolution"
+          }
+        ],
+        "unique_signature_count": 1
+      },
+      "sample_count": 1,
+      "turning_points": {
+        "mean_normalized_position": {
+          "tp1": 0.2857142857142857,
+          "tp2": 0.5714285714285714,
+          "tp3": 1.0,
+          "tp4": 0.7142857142857143,
+          "tp5": 0.14285714285714285
+        },
+        "ordering_violation_count": 1,
+        "ordering_violation_rate": 1.0,
+        "sample_count": 1,
+        "std_normalized_position": {
+          "tp1": 0.0,
+          "tp2": 0.0,
+          "tp3": 0.0,
+          "tp4": 0.0,
+          "tp5": 0.0
+        }
+      },
+      "warning_count": 1
+    },
+    "multicultural/ja": {
+      "affective_proxy_coverage": {
+        "recognized_token_count": 2,
+        "sentence_count": 9
+      },
+      "arc_distribution": {
+        "counts": {
+          "Cinderella": 0,
+          "Double Man in Hole": 0,
+          "Icarus": 0,
+          "Man in Hole": 0,
+          "Oedipus": 0,
+          "Rags to Riches": 0,
+          "Riches to Rags": 1
+        },
+        "entropy": 0.0,
+        "normalized_entropy": 0.0,
+        "probabilities": {
+          "Cinderella": 0.0,
+          "Double Man in Hole": 0.0,
+          "Icarus": 0.0,
+          "Man in Hole": 0.0,
+          "Oedipus": 0.0,
+          "Rags to Riches": 0.0,
+          "Riches to Rags": 1.0
+        },
+        "sample_count": 1
+      },
+      "discourse_features": {
+        "mean_agency_markers_per_100_tokens": 0.0,
+        "mean_arousal_range": 0.16999999999999993,
+        "mean_flattening_proxy": 0.4713299663299663,
+        "mean_negative_vad_rate": 0.5,
+        "mean_positive_vad_rate": 0.5,
+        "mean_suspense_proxy": 0.005050505050505051,
+        "mean_tension_markers_per_100_tokens": 0.5050505050505051,
+        "mean_valence_range": 0.8
+      },
+      "lexical_diversity": {
+        "corpus_distinct_1": 0.6060606060606061,
+        "corpus_distinct_2": 0.9238578680203046,
+        "corpus_token_entropy": 4.435350278165542,
+        "mean_story_token_count": 198.0,
+        "mean_story_type_token_ratio": 0.6060606060606061,
+        "pairwise_bigram_jaccard_distance": 0.0,
+        "pairwise_token_jaccard_distance": 0.0,
+        "sample_count": 1
+      },
+      "mean_affective_curve": {
+        "arousal": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5184210526315789,
+          0.5394736842105263,
+          0.5394736842105263,
+          0.5184210526315789,
+          0.5,
+          0.5,
+          0.5,
+          0.5694736842105264,
+          0.6621052631578946,
+          0.6852631578947368,
+          0.5926315789473685,
+          0.5
+        ],
+        "valence": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.3821052631578948,
+          0.24736842105263165,
+          0.2473684210526315,
+          0.3821052631578948,
+          0.5,
+          0.5,
+          0.5,
+          0.651578947368421,
+          0.8536842105263156,
+          0.9042105263157895,
+          0.702105263157895,
+          0.5
+        ]
+      },
+      "plot_diversity": {
+        "duplicate_signature_count": 0,
+        "duplicate_signature_rate": 0.0,
+        "normalized_signature_entropy": 0.0,
+        "sample_count": 1,
+        "signature_entropy": 0.0,
+        "top_signatures": [
+          {
+            "count": 1,
+            "signature": "Riches to Rags|single_track|linear|tension|low_agency|resolution"
+          }
+        ],
+        "unique_signature_count": 1
+      },
+      "sample_count": 1,
+      "turning_points": {
+        "mean_normalized_position": {
+          "tp1": 0.3333333333333333,
+          "tp2": 0.5555555555555556,
+          "tp3": 0.7777777777777778,
+          "tp4": 1.0,
+          "tp5": 0.6666666666666666
+        },
+        "ordering_violation_count": 1,
+        "ordering_violation_rate": 1.0,
+        "sample_count": 1,
+        "std_normalized_position": {
+          "tp1": 0.0,
+          "tp2": 0.0,
+          "tp3": 0.0,
+          "tp4": 0.0,
+          "tp5": 0.0
+        }
+      },
+      "warning_count": 1
+    },
+    "multicultural/zh": {
+      "affective_proxy_coverage": {
+        "recognized_token_count": 3,
+        "sentence_count": 9
+      },
+      "arc_distribution": {
+        "counts": {
+          "Cinderella": 0,
+          "Double Man in Hole": 0,
+          "Icarus": 0,
+          "Man in Hole": 0,
+          "Oedipus": 0,
+          "Rags to Riches": 0,
+          "Riches to Rags": 1
+        },
+        "entropy": 0.0,
+        "normalized_entropy": 0.0,
+        "probabilities": {
+          "Cinderella": 0.0,
+          "Double Man in Hole": 0.0,
+          "Icarus": 0.0,
+          "Man in Hole": 0.0,
+          "Oedipus": 0.0,
+          "Rags to Riches": 0.0,
+          "Riches to Rags": 1.0
+        },
+        "sample_count": 1
+      },
+      "discourse_features": {
+        "mean_agency_markers_per_100_tokens": 0.0,
+        "mean_arousal_range": 0.16999999999999993,
+        "mean_flattening_proxy": 0.5741823899371069,
+        "mean_negative_vad_rate": 0.3333333333333333,
+        "mean_positive_vad_rate": 0.6666666666666666,
+        "mean_suspense_proxy": 0.006289308176100629,
+        "mean_tension_markers_per_100_tokens": 0.6289308176100629,
+        "mean_valence_range": 0.8
+      },
+      "lexical_diversity": {
+        "corpus_distinct_1": 0.610062893081761,
+        "corpus_distinct_2": 0.930379746835443,
+        "corpus_token_entropy": 4.261115356254407,
+        "mean_story_token_count": 159.0,
+        "mean_story_type_token_ratio": 0.610062893081761,
+        "pairwise_bigram_jaccard_distance": 0.0,
+        "pairwise_token_jaccard_distance": 0.0,
+        "sample_count": 1
+      },
+      "mean_affective_curve": {
+        "arousal": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5497368421052631,
+          0.606578947368421,
+          0.6528947368421052,
+          0.6886842105263158,
+          0.708421052631579,
+          0.6157894736842104,
+          0.5231578947368422,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "valence": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5294736842105263,
+          0.5631578947368421,
+          0.6642105263157894,
+          0.8326315789473685,
+          0.9547368421052633,
+          0.7526315789473683,
+          0.5505263157894739,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ]
+      },
+      "plot_diversity": {
+        "duplicate_signature_count": 0,
+        "duplicate_signature_rate": 0.0,
+        "normalized_signature_entropy": 0.0,
+        "sample_count": 1,
+        "signature_entropy": 0.0,
+        "top_signatures": [
+          {
+            "count": 1,
+            "signature": "Riches to Rags|single_track|linear|tension|low_agency|resolution"
+          }
+        ],
+        "unique_signature_count": 1
+      },
+      "sample_count": 1,
+      "turning_points": {
+        "mean_normalized_position": {
+          "tp1": 0.2222222222222222,
+          "tp2": 0.4444444444444444,
+          "tp3": 0.7777777777777778,
+          "tp4": 1.0,
+          "tp5": 0.1111111111111111
+        },
+        "ordering_violation_count": 1,
+        "ordering_violation_rate": 1.0,
+        "sample_count": 1,
+        "std_normalized_position": {
+          "tp1": 0.0,
+          "tp2": 0.0,
+          "tp3": 0.0,
+          "tp4": 0.0,
+          "tp5": 0.0
+        }
+      },
+      "warning_count": 1
+    },
+    "multilingual/en": {
+      "affective_proxy_coverage": {
+        "recognized_token_count": 0,
+        "sentence_count": 10
+      },
+      "arc_distribution": {
+        "counts": {
+          "Cinderella": 0,
+          "Double Man in Hole": 0,
+          "Icarus": 0,
+          "Man in Hole": 0,
+          "Oedipus": 0,
+          "Rags to Riches": 0,
+          "Riches to Rags": 1
+        },
+        "entropy": 0.0,
+        "normalized_entropy": 0.0,
+        "probabilities": {
+          "Cinderella": 0.0,
+          "Double Man in Hole": 0.0,
+          "Icarus": 0.0,
+          "Man in Hole": 0.0,
+          "Oedipus": 0.0,
+          "Rags to Riches": 0.0,
+          "Riches to Rags": 1.0
+        },
+        "sample_count": 1
+      },
+      "discourse_features": {
+        "mean_agency_markers_per_100_tokens": 0.0,
+        "mean_arousal_range": 0.0,
+        "mean_flattening_proxy": 0.0,
+        "mean_negative_vad_rate": 0.0,
+        "mean_positive_vad_rate": 0.0,
+        "mean_suspense_proxy": 0.0,
+        "mean_tension_markers_per_100_tokens": 0.0,
+        "mean_valence_range": 0.0
+      },
+      "lexical_diversity": {
+        "corpus_distinct_1": 0.5336322869955157,
+        "corpus_distinct_2": 0.9054054054054054,
+        "corpus_token_entropy": 4.315761461764702,
+        "mean_story_token_count": 223.0,
+        "mean_story_type_token_ratio": 0.5336322869955157,
+        "pairwise_bigram_jaccard_distance": 0.0,
+        "pairwise_token_jaccard_distance": 0.0,
+        "sample_count": 1
+      },
+      "mean_affective_curve": {
+        "arousal": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "valence": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ]
+      },
+      "plot_diversity": {
+        "duplicate_signature_count": 0,
+        "duplicate_signature_rate": 0.0,
+        "normalized_signature_entropy": 0.0,
+        "sample_count": 1,
+        "signature_entropy": 0.0,
+        "top_signatures": [
+          {
+            "count": 1,
+            "signature": "Riches to Rags|single_track|linear|low_tension|low_agency|low_resolution"
+          }
+        ],
+        "unique_signature_count": 1
+      },
+      "sample_count": 1,
+      "turning_points": {
+        "mean_normalized_position": {
+          "tp1": 0.5,
+          "tp2": 0.8,
+          "tp3": 1.0,
+          "tp4": 0.1,
+          "tp5": 0.7
+        },
+        "ordering_violation_count": 1,
+        "ordering_violation_rate": 1.0,
+        "sample_count": 1,
+        "std_normalized_position": {
+          "tp1": 0.0,
+          "tp2": 0.0,
+          "tp3": 0.0,
+          "tp4": 0.0,
+          "tp5": 0.0
+        }
+      },
+      "warning_count": 1
+    },
+    "multilingual/ja": {
+      "affective_proxy_coverage": {
+        "recognized_token_count": 0,
+        "sentence_count": 4
+      },
+      "arc_distribution": {
+        "counts": {
+          "Cinderella": 0,
+          "Double Man in Hole": 0,
+          "Icarus": 0,
+          "Man in Hole": 0,
+          "Oedipus": 0,
+          "Rags to Riches": 1,
+          "Riches to Rags": 0
+        },
+        "entropy": 0.0,
+        "normalized_entropy": 0.0,
+        "probabilities": {
+          "Cinderella": 0.0,
+          "Double Man in Hole": 0.0,
+          "Icarus": 0.0,
+          "Man in Hole": 0.0,
+          "Oedipus": 0.0,
+          "Rags to Riches": 1.0,
+          "Riches to Rags": 0.0
+        },
+        "sample_count": 1
+      },
+      "discourse_features": {
+        "mean_agency_markers_per_100_tokens": 0.0,
+        "mean_arousal_range": 0.0,
+        "mean_flattening_proxy": 0.0,
+        "mean_negative_vad_rate": 0.0,
+        "mean_positive_vad_rate": 0.0,
+        "mean_suspense_proxy": 0.0,
+        "mean_tension_markers_per_100_tokens": 0.0,
+        "mean_valence_range": 0.0
+      },
+      "lexical_diversity": {
+        "corpus_distinct_1": 0.6695652173913044,
+        "corpus_distinct_2": 0.9736842105263158,
+        "corpus_token_entropy": 4.025360501761265,
+        "mean_story_token_count": 115.0,
+        "mean_story_type_token_ratio": 0.6695652173913044,
+        "pairwise_bigram_jaccard_distance": 0.0,
+        "pairwise_token_jaccard_distance": 0.0,
+        "sample_count": 1
+      },
+      "mean_affective_curve": {
+        "arousal": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "valence": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ]
+      },
+      "plot_diversity": {
+        "duplicate_signature_count": 0,
+        "duplicate_signature_rate": 0.0,
+        "normalized_signature_entropy": 0.0,
+        "sample_count": 1,
+        "signature_entropy": 0.0,
+        "top_signatures": [
+          {
+            "count": 1,
+            "signature": "Rags to Riches|single_track|linear|low_tension|low_agency|low_resolution"
+          }
+        ],
+        "unique_signature_count": 1
+      },
+      "sample_count": 1,
+      "turning_points": {
+        "mean_normalized_position": {
+          "tp1": 0.25,
+          "tp2": 0.5,
+          "tp3": 0.75,
+          "tp4": 1.0,
+          "tp5": 0.25
+        },
+        "ordering_violation_count": 1,
+        "ordering_violation_rate": 1.0,
+        "sample_count": 1,
+        "std_normalized_position": {
+          "tp1": 0.0,
+          "tp2": 0.0,
+          "tp3": 0.0,
+          "tp4": 0.0,
+          "tp5": 0.0
+        }
+      },
+      "warning_count": 1
+    },
+    "multilingual/zh": {
+      "affective_proxy_coverage": {
+        "recognized_token_count": 2,
+        "sentence_count": 3
+      },
+      "arc_distribution": {
+        "counts": {
+          "Cinderella": 0,
+          "Double Man in Hole": 0,
+          "Icarus": 0,
+          "Man in Hole": 0,
+          "Oedipus": 0,
+          "Rags to Riches": 0,
+          "Riches to Rags": 1
+        },
+        "entropy": 0.0,
+        "normalized_entropy": 0.0,
+        "probabilities": {
+          "Cinderella": 0.0,
+          "Double Man in Hole": 0.0,
+          "Icarus": 0.0,
+          "Man in Hole": 0.0,
+          "Oedipus": 0.0,
+          "Rags to Riches": 0.0,
+          "Riches to Rags": 1.0
+        },
+        "sample_count": 1
+      },
+      "discourse_features": {
+        "mean_agency_markers_per_100_tokens": 0.0,
+        "mean_arousal_range": 0.14,
+        "mean_flattening_proxy": 0.965,
+        "mean_negative_vad_rate": 0.0,
+        "mean_positive_vad_rate": 1.0,
+        "mean_suspense_proxy": 0.0,
+        "mean_tension_markers_per_100_tokens": 0.0,
+        "mean_valence_range": 0.06999999999999995
+      },
+      "lexical_diversity": {
+        "corpus_distinct_1": 0.7974683544303798,
+        "corpus_distinct_2": 0.9871794871794872,
+        "corpus_token_entropy": 4.0262135164637565,
+        "mean_story_token_count": 79.0,
+        "mean_story_type_token_ratio": 0.7974683544303798,
+        "pairwise_bigram_jaccard_distance": 0.0,
+        "pairwise_token_jaccard_distance": 0.0,
+        "sample_count": 1
+      },
+      "mean_affective_curve": {
+        "arousal": [
+          0.72,
+          0.6968421052631579,
+          0.6736842105263158,
+          0.6505263157894736,
+          0.6273684210526316,
+          0.6042105263157895,
+          0.5810526315789474,
+          0.5578947368421052,
+          0.5347368421052632,
+          0.511578947368421,
+          0.5042105263157894,
+          0.5126315789473684,
+          0.5210526315789473,
+          0.5294736842105263,
+          0.5378947368421052,
+          0.5463157894736842,
+          0.5547368421052632,
+          0.5631578947368421,
+          0.571578947368421,
+          0.58
+        ],
+        "valence": [
+          0.95,
+          0.9026315789473685,
+          0.8552631578947368,
+          0.8078947368421052,
+          0.7605263157894737,
+          0.7131578947368421,
+          0.6657894736842105,
+          0.618421052631579,
+          0.5710526315789474,
+          0.5236842105263158,
+          0.52,
+          0.56,
+          0.6,
+          0.64,
+          0.6799999999999999,
+          0.72,
+          0.76,
+          0.8,
+          0.84,
+          0.88
+        ]
+      },
+      "plot_diversity": {
+        "duplicate_signature_count": 0,
+        "duplicate_signature_rate": 0.0,
+        "normalized_signature_entropy": 0.0,
+        "sample_count": 1,
+        "signature_entropy": 0.0,
+        "top_signatures": [
+          {
+            "count": 1,
+            "signature": "Riches to Rags|single_track|linear|low_tension|low_agency|resolution"
+          }
+        ],
+        "unique_signature_count": 1
+      },
+      "sample_count": 1,
+      "turning_points": {
+        "mean_normalized_position": {
+          "tp1": 0.6666666666666666,
+          "tp2": 1.0,
+          "tp3": 0.3333333333333333,
+          "tp4": 1.0,
+          "tp5": 0.6666666666666666
+        },
+        "ordering_violation_count": 1,
+        "ordering_violation_rate": 1.0,
+        "sample_count": 1,
+        "std_normalized_position": {
+          "tp1": 0.0,
+          "tp2": 0.0,
+          "tp3": 0.0,
+          "tp4": 0.0,
+          "tp5": 0.0
+        }
+      },
+      "warning_count": 1
+    }
+  },
+  "condition_narrative_parameters": {
+    "monolingual/neutral": {
+      "affective_proxy_coverage": {
+        "recognized_token_count": 2,
+        "sentence_count": 19
+      },
+      "arc_distribution": {
+        "counts": {
+          "Cinderella": 0,
+          "Double Man in Hole": 0,
+          "Icarus": 0,
+          "Man in Hole": 0,
+          "Oedipus": 0,
+          "Rags to Riches": 0,
+          "Riches to Rags": 3
+        },
+        "entropy": 0.0,
+        "normalized_entropy": 0.0,
+        "probabilities": {
+          "Cinderella": 0.0,
+          "Double Man in Hole": 0.0,
+          "Icarus": 0.0,
+          "Man in Hole": 0.0,
+          "Oedipus": 0.0,
+          "Rags to Riches": 0.0,
+          "Riches to Rags": 1.0
+        },
+        "sample_count": 3
+      },
+      "discourse_features": {
+        "mean_agency_markers_per_100_tokens": 0.0,
+        "mean_arousal_range": 0.05666666666666664,
+        "mean_flattening_proxy": 0.15199346405228759,
+        "mean_negative_vad_rate": 0.16666666666666666,
+        "mean_positive_vad_rate": 0.16666666666666666,
+        "mean_suspense_proxy": 0.0024509803921568627,
+        "mean_tension_markers_per_100_tokens": 0.2450980392156863,
+        "mean_valence_range": 0.26666666666666666
+      },
+      "lexical_diversity": {
+        "corpus_distinct_1": 0.45474613686534215,
+        "corpus_distinct_2": 0.8288888888888889,
+        "corpus_token_entropy": 4.746769888746423,
+        "mean_story_token_count": 151.0,
+        "mean_story_type_token_ratio": 0.6416891430826,
+        "pairwise_bigram_jaccard_distance": 0.9175295132261668,
+        "pairwise_token_jaccard_distance": 0.7586252354048963,
+        "sample_count": 3
+      },
+      "mean_affective_curve": {
+        "arousal": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.503859649122807,
+          0.5231578947368422,
+          0.5424561403508772,
+          0.5617543859649122,
+          0.5656140350877193,
+          0.5463157894736842,
+          0.527017543859649,
+          0.507719298245614,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5035087719298246,
+          0.5078947368421053,
+          0.5122807017543859,
+          0.5166666666666667
+        ],
+        "valence": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5084210526315789,
+          0.5505263157894736,
+          0.5926315789473685,
+          0.6347368421052632,
+          0.643157894736842,
+          0.6010526315789474,
+          0.5589473684210526,
+          0.5168421052631579,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.4775438596491228,
+          0.4494736842105263,
+          0.42140350877192984,
+          0.3933333333333333
+        ]
+      },
+      "plot_diversity": {
+        "duplicate_signature_count": 1,
+        "duplicate_signature_rate": 0.3333333333333333,
+        "normalized_signature_entropy": 1.0,
+        "sample_count": 3,
+        "signature_entropy": 0.6365141682948128,
+        "top_signatures": [
+          {
+            "count": 2,
+            "signature": "Riches to Rags|single_track|linear|low_tension|low_agency|low_resolution"
+          },
+          {
+            "count": 1,
+            "signature": "Riches to Rags|single_track|linear|tension|low_agency|resolution"
+          }
+        ],
+        "unique_signature_count": 2
+      },
+      "sample_count": 3,
+      "turning_points": {
+        "mean_normalized_position": {
+          "tp1": 0.2619047619047619,
+          "tp2": 0.611111111111111,
+          "tp3": 0.43650793650793646,
+          "tp4": 0.7936507936507936,
+          "tp5": 0.6031746031746031
+        },
+        "ordering_violation_count": 2,
+        "ordering_violation_rate": 0.6666666666666666,
+        "sample_count": 3,
+        "std_normalized_position": {
+          "tp1": 0.07009334020895115,
+          "tp2": 0.28327886186626583,
+          "tp3": 0.21850634758628895,
+          "tp4": 0.1472002935792969,
+          "tp5": 0.3254935976890457
+        }
+      },
+      "warning_count": 2
+    },
+    "multicultural/neutral": {
+      "affective_proxy_coverage": {
+        "recognized_token_count": 6,
+        "sentence_count": 25
+      },
+      "arc_distribution": {
+        "counts": {
+          "Cinderella": 0,
+          "Double Man in Hole": 0,
+          "Icarus": 0,
+          "Man in Hole": 0,
+          "Oedipus": 0,
+          "Rags to Riches": 0,
+          "Riches to Rags": 3
+        },
+        "entropy": 0.0,
+        "normalized_entropy": 0.0,
+        "probabilities": {
+          "Cinderella": 0.0,
+          "Double Man in Hole": 0.0,
+          "Icarus": 0.0,
+          "Man in Hole": 0.0,
+          "Oedipus": 0.0,
+          "Rags to Riches": 0.0,
+          "Riches to Rags": 1.0
+        },
+        "sample_count": 3
+      },
+      "discourse_features": {
+        "mean_agency_markers_per_100_tokens": 0.0,
+        "mean_arousal_range": 0.11333333333333329,
+        "mean_flattening_proxy": 0.5563894234151893,
+        "mean_negative_vad_rate": 0.611111111111111,
+        "mean_positive_vad_rate": 0.38888888888888884,
+        "mean_suspense_proxy": 0.005930475376610496,
+        "mean_tension_markers_per_100_tokens": 0.5930475376610495,
+        "mean_valence_range": 0.5333333333333333
+      },
+      "lexical_diversity": {
+        "corpus_distinct_1": 0.412109375,
+        "corpus_distinct_2": 0.7917485265225933,
+        "corpus_token_entropy": 4.779937970240282,
+        "mean_story_token_count": 170.66666666666666,
+        "mean_story_type_token_ratio": 0.6225788007893911,
+        "pairwise_bigram_jaccard_distance": 0.9103679712433784,
+        "pairwise_token_jaccard_distance": 0.7258709612263803,
+        "sample_count": 3
+      },
+      "mean_affective_curve": {
+        "arousal": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.522719298245614,
+          0.5486842105263158,
+          0.5720175438596491,
+          0.5927192982456141,
+          0.6089473684210526,
+          0.5833333333333334,
+          0.5366666666666666,
+          0.5363157894736842,
+          0.5540350877192982,
+          0.5617543859649122,
+          0.5308771929824562,
+          0.5
+        ],
+        "valence": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.4705263157894737,
+          0.4368421052631579,
+          0.4484210526315789,
+          0.5052631578947369,
+          0.5410526315789475,
+          0.4589473684210527,
+          0.43578947368421067,
+          0.5136842105263157,
+          0.6178947368421052,
+          0.6347368421052632,
+          0.5673684210526316,
+          0.5
+        ]
+      },
+      "plot_diversity": {
+        "duplicate_signature_count": 1,
+        "duplicate_signature_rate": 0.3333333333333333,
+        "normalized_signature_entropy": 1.0,
+        "sample_count": 3,
+        "signature_entropy": 0.6365141682948128,
+        "top_signatures": [
+          {
+            "count": 2,
+            "signature": "Riches to Rags|single_track|linear|tension|low_agency|resolution"
+          },
+          {
+            "count": 1,
+            "signature": "Riches to Rags|single_track|linear|tension|low_agency|low_resolution"
+          }
+        ],
+        "unique_signature_count": 2
+      },
+      "sample_count": 3,
+      "turning_points": {
+        "mean_normalized_position": {
+          "tp1": 0.2804232804232804,
+          "tp2": 0.5238095238095238,
+          "tp3": 0.8518518518518517,
+          "tp4": 0.9047619047619048,
+          "tp5": 0.30687830687830686
+        },
+        "ordering_violation_count": 3,
+        "ordering_violation_rate": 1.0,
+        "sample_count": 3,
+        "std_normalized_position": {
+          "tp1": 0.045514948502871036,
+          "tp2": 0.056492477523975196,
+          "tp3": 0.10475656017578482,
+          "tp4": 0.13468700594029476,
+          "tp5": 0.25473869031133806
+        }
+      },
+      "warning_count": 3
+    },
+    "multilingual/neutral": {
+      "affective_proxy_coverage": {
+        "recognized_token_count": 2,
+        "sentence_count": 17
+      },
+      "arc_distribution": {
+        "counts": {
+          "Cinderella": 0,
+          "Double Man in Hole": 0,
+          "Icarus": 0,
+          "Man in Hole": 0,
+          "Oedipus": 0,
+          "Rags to Riches": 1,
+          "Riches to Rags": 2
+        },
+        "entropy": 0.6365141682948128,
+        "normalized_entropy": 0.5793801642856949,
+        "probabilities": {
+          "Cinderella": 0.0,
+          "Double Man in Hole": 0.0,
+          "Icarus": 0.0,
+          "Man in Hole": 0.0,
+          "Oedipus": 0.0,
+          "Rags to Riches": 0.3333333333333333,
+          "Riches to Rags": 0.6666666666666666
+        },
+        "sample_count": 3
+      },
+      "discourse_features": {
+        "mean_agency_markers_per_100_tokens": 0.0,
+        "mean_arousal_range": 0.04666666666666667,
+        "mean_flattening_proxy": 0.32166666666666666,
+        "mean_negative_vad_rate": 0.0,
+        "mean_positive_vad_rate": 0.3333333333333333,
+        "mean_suspense_proxy": 0.0,
+        "mean_tension_markers_per_100_tokens": 0.0,
+        "mean_valence_range": 0.023333333333333317
+      },
+      "lexical_diversity": {
+        "corpus_distinct_1": 0.44364508393285373,
+        "corpus_distinct_2": 0.7995169082125604,
+        "corpus_token_entropy": 4.605937175183212,
+        "mean_story_token_count": 139.0,
+        "mean_story_type_token_ratio": 0.6668886196057332,
+        "pairwise_bigram_jaccard_distance": 0.8831203977169292,
+        "pairwise_token_jaccard_distance": 0.7547444963841944,
+        "sample_count": 3
+      },
+      "mean_affective_curve": {
+        "arousal": [
+          0.5733333333333334,
+          0.5656140350877193,
+          0.5578947368421052,
+          0.5501754385964912,
+          0.5424561403508772,
+          0.5347368421052632,
+          0.5270175438596492,
+          0.519298245614035,
+          0.511578947368421,
+          0.503859649122807,
+          0.5014035087719299,
+          0.5042105263157896,
+          0.5070175438596491,
+          0.5098245614035087,
+          0.5126315789473684,
+          0.515438596491228,
+          0.5182456140350877,
+          0.5210526315789473,
+          0.523859649122807,
+          0.5266666666666667
+        ],
+        "valence": [
+          0.65,
+          0.6342105263157894,
+          0.6184210526315789,
+          0.6026315789473684,
+          0.5868421052631579,
+          0.5710526315789474,
+          0.5552631578947368,
+          0.5394736842105263,
+          0.5236842105263158,
+          0.5078947368421053,
+          0.5066666666666667,
+          0.52,
+          0.5333333333333333,
+          0.5466666666666667,
+          0.5599999999999999,
+          0.5733333333333334,
+          0.5866666666666667,
+          0.6,
+          0.6133333333333333,
+          0.6266666666666666
+        ]
+      },
+      "plot_diversity": {
+        "duplicate_signature_count": 0,
+        "duplicate_signature_rate": 0.0,
+        "normalized_signature_entropy": 0.9999999999999998,
+        "sample_count": 3,
+        "signature_entropy": 1.0986122886681096,
+        "top_signatures": [
+          {
+            "count": 1,
+            "signature": "Riches to Rags|single_track|linear|low_tension|low_agency|low_resolution"
+          },
+          {
+            "count": 1,
+            "signature": "Riches to Rags|single_track|linear|low_tension|low_agency|resolution"
+          },
+          {
+            "count": 1,
+            "signature": "Rags to Riches|single_track|linear|low_tension|low_agency|low_resolution"
+          }
+        ],
+        "unique_signature_count": 3
+      },
+      "sample_count": 3,
+      "turning_points": {
+        "mean_normalized_position": {
+          "tp1": 0.47222222222222215,
+          "tp2": 0.7666666666666666,
+          "tp3": 0.6944444444444443,
+          "tp4": 0.7000000000000001,
+          "tp5": 0.5388888888888889
+        },
+        "ordering_violation_count": 3,
+        "ordering_violation_rate": 1.0,
+        "sample_count": 3,
+        "std_normalized_position": {
+          "tp1": 0.17123372230469378,
+          "tp2": 0.20548046676563256,
+          "tp3": 0.27498597046143514,
+          "tp4": 0.42426406871192857,
+          "tp5": 0.20472806414098085
+        }
+      },
+      "warning_count": 3
+    }
+  },
+  "conditions": {
+    "monolingual": {
+      "affective_proxy_coverage": {
+        "recognized_token_count": 2,
+        "sentence_count": 19
+      },
+      "arc_distribution": {
+        "counts": {
+          "Cinderella": 0,
+          "Double Man in Hole": 0,
+          "Icarus": 0,
+          "Man in Hole": 0,
+          "Oedipus": 0,
+          "Rags to Riches": 0,
+          "Riches to Rags": 3
+        },
+        "entropy": 0.0,
+        "normalized_entropy": 0.0,
+        "probabilities": {
+          "Cinderella": 0.0,
+          "Double Man in Hole": 0.0,
+          "Icarus": 0.0,
+          "Man in Hole": 0.0,
+          "Oedipus": 0.0,
+          "Rags to Riches": 0.0,
+          "Riches to Rags": 1.0
+        },
+        "sample_count": 3
+      },
+      "discourse_features": {
+        "mean_agency_markers_per_100_tokens": 0.0,
+        "mean_arousal_range": 0.05666666666666664,
+        "mean_flattening_proxy": 0.15199346405228759,
+        "mean_negative_vad_rate": 0.16666666666666666,
+        "mean_positive_vad_rate": 0.16666666666666666,
+        "mean_suspense_proxy": 0.0024509803921568627,
+        "mean_tension_markers_per_100_tokens": 0.2450980392156863,
+        "mean_valence_range": 0.26666666666666666
+      },
+      "distance_from_human": {
+        "arc_jensen_shannon_distance": 0.6944707740962477,
+        "turning_point_mean_absolute_distance": 0.18468815911248251
+      },
+      "lexical_diversity": {
+        "corpus_distinct_1": 0.45474613686534215,
+        "corpus_distinct_2": 0.8288888888888889,
+        "corpus_token_entropy": 4.746769888746423,
+        "mean_story_token_count": 151.0,
+        "mean_story_type_token_ratio": 0.6416891430826,
+        "pairwise_bigram_jaccard_distance": 0.9175295132261668,
+        "pairwise_token_jaccard_distance": 0.7586252354048963,
+        "sample_count": 3
+      },
+      "mean_affective_curve": {
+        "arousal": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.503859649122807,
+          0.5231578947368422,
+          0.5424561403508772,
+          0.5617543859649122,
+          0.5656140350877193,
+          0.5463157894736842,
+          0.527017543859649,
+          0.507719298245614,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5035087719298246,
+          0.5078947368421053,
+          0.5122807017543859,
+          0.5166666666666667
+        ],
+        "valence": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5084210526315789,
+          0.5505263157894736,
+          0.5926315789473685,
+          0.6347368421052632,
+          0.643157894736842,
+          0.6010526315789474,
+          0.5589473684210526,
+          0.5168421052631579,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.4775438596491228,
+          0.4494736842105263,
+          0.42140350877192984,
+          0.3933333333333333
+        ]
+      },
+      "plot_diversity": {
+        "duplicate_signature_count": 1,
+        "duplicate_signature_rate": 0.3333333333333333,
+        "normalized_signature_entropy": 1.0,
+        "sample_count": 3,
+        "signature_entropy": 0.6365141682948128,
+        "top_signatures": [
+          {
+            "count": 2,
+            "signature": "Riches to Rags|single_track|linear|low_tension|low_agency|low_resolution"
+          },
+          {
+            "count": 1,
+            "signature": "Riches to Rags|single_track|linear|tension|low_agency|resolution"
+          }
+        ],
+        "unique_signature_count": 2
+      },
+      "sample_count": 3,
+      "turning_points": {
+        "mean_normalized_position": {
+          "tp1": 0.2619047619047619,
+          "tp2": 0.611111111111111,
+          "tp3": 0.43650793650793646,
+          "tp4": 0.7936507936507936,
+          "tp5": 0.6031746031746031
+        },
+        "ordering_violation_count": 2,
+        "ordering_violation_rate": 0.6666666666666666,
+        "sample_count": 3,
+        "std_normalized_position": {
+          "tp1": 0.07009334020895115,
+          "tp2": 0.28327886186626583,
+          "tp3": 0.21850634758628895,
+          "tp4": 0.1472002935792969,
+          "tp5": 0.3254935976890457
+        }
+      },
+      "warning_count": 2
+    },
+    "multicultural": {
+      "affective_proxy_coverage": {
+        "recognized_token_count": 6,
+        "sentence_count": 25
+      },
+      "arc_distribution": {
+        "counts": {
+          "Cinderella": 0,
+          "Double Man in Hole": 0,
+          "Icarus": 0,
+          "Man in Hole": 0,
+          "Oedipus": 0,
+          "Rags to Riches": 0,
+          "Riches to Rags": 3
+        },
+        "entropy": 0.0,
+        "normalized_entropy": 0.0,
+        "probabilities": {
+          "Cinderella": 0.0,
+          "Double Man in Hole": 0.0,
+          "Icarus": 0.0,
+          "Man in Hole": 0.0,
+          "Oedipus": 0.0,
+          "Rags to Riches": 0.0,
+          "Riches to Rags": 1.0
+        },
+        "sample_count": 3
+      },
+      "discourse_features": {
+        "mean_agency_markers_per_100_tokens": 0.0,
+        "mean_arousal_range": 0.11333333333333329,
+        "mean_flattening_proxy": 0.5563894234151893,
+        "mean_negative_vad_rate": 0.611111111111111,
+        "mean_positive_vad_rate": 0.38888888888888884,
+        "mean_suspense_proxy": 0.005930475376610496,
+        "mean_tension_markers_per_100_tokens": 0.5930475376610495,
+        "mean_valence_range": 0.5333333333333333
+      },
+      "distance_from_human": {
+        "arc_jensen_shannon_distance": 0.6944707740962477,
+        "turning_point_mean_absolute_distance": 0.3187869817066308
+      },
+      "lexical_diversity": {
+        "corpus_distinct_1": 0.412109375,
+        "corpus_distinct_2": 0.7917485265225933,
+        "corpus_token_entropy": 4.779937970240282,
+        "mean_story_token_count": 170.66666666666666,
+        "mean_story_type_token_ratio": 0.6225788007893911,
+        "pairwise_bigram_jaccard_distance": 0.9103679712433784,
+        "pairwise_token_jaccard_distance": 0.7258709612263803,
+        "sample_count": 3
+      },
+      "mean_affective_curve": {
+        "arousal": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.522719298245614,
+          0.5486842105263158,
+          0.5720175438596491,
+          0.5927192982456141,
+          0.6089473684210526,
+          0.5833333333333334,
+          0.5366666666666666,
+          0.5363157894736842,
+          0.5540350877192982,
+          0.5617543859649122,
+          0.5308771929824562,
+          0.5
+        ],
+        "valence": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.4705263157894737,
+          0.4368421052631579,
+          0.4484210526315789,
+          0.5052631578947369,
+          0.5410526315789475,
+          0.4589473684210527,
+          0.43578947368421067,
+          0.5136842105263157,
+          0.6178947368421052,
+          0.6347368421052632,
+          0.5673684210526316,
+          0.5
+        ]
+      },
+      "plot_diversity": {
+        "duplicate_signature_count": 1,
+        "duplicate_signature_rate": 0.3333333333333333,
+        "normalized_signature_entropy": 1.0,
+        "sample_count": 3,
+        "signature_entropy": 0.6365141682948128,
+        "top_signatures": [
+          {
+            "count": 2,
+            "signature": "Riches to Rags|single_track|linear|tension|low_agency|resolution"
+          },
+          {
+            "count": 1,
+            "signature": "Riches to Rags|single_track|linear|tension|low_agency|low_resolution"
+          }
+        ],
+        "unique_signature_count": 2
+      },
+      "sample_count": 3,
+      "turning_points": {
+        "mean_normalized_position": {
+          "tp1": 0.2804232804232804,
+          "tp2": 0.5238095238095238,
+          "tp3": 0.8518518518518517,
+          "tp4": 0.9047619047619048,
+          "tp5": 0.30687830687830686
+        },
+        "ordering_violation_count": 3,
+        "ordering_violation_rate": 1.0,
+        "sample_count": 3,
+        "std_normalized_position": {
+          "tp1": 0.045514948502871036,
+          "tp2": 0.056492477523975196,
+          "tp3": 0.10475656017578482,
+          "tp4": 0.13468700594029476,
+          "tp5": 0.25473869031133806
+        }
+      },
+      "warning_count": 3
+    },
+    "multilingual": {
+      "affective_proxy_coverage": {
+        "recognized_token_count": 2,
+        "sentence_count": 17
+      },
+      "arc_distribution": {
+        "counts": {
+          "Cinderella": 0,
+          "Double Man in Hole": 0,
+          "Icarus": 0,
+          "Man in Hole": 0,
+          "Oedipus": 0,
+          "Rags to Riches": 1,
+          "Riches to Rags": 2
+        },
+        "entropy": 0.6365141682948128,
+        "normalized_entropy": 0.5793801642856949,
+        "probabilities": {
+          "Cinderella": 0.0,
+          "Double Man in Hole": 0.0,
+          "Icarus": 0.0,
+          "Man in Hole": 0.0,
+          "Oedipus": 0.0,
+          "Rags to Riches": 0.3333333333333333,
+          "Riches to Rags": 0.6666666666666666
+        },
+        "sample_count": 3
+      },
+      "discourse_features": {
+        "mean_agency_markers_per_100_tokens": 0.0,
+        "mean_arousal_range": 0.04666666666666667,
+        "mean_flattening_proxy": 0.32166666666666666,
+        "mean_negative_vad_rate": 0.0,
+        "mean_positive_vad_rate": 0.3333333333333333,
+        "mean_suspense_proxy": 0.0,
+        "mean_tension_markers_per_100_tokens": 0.0,
+        "mean_valence_range": 0.023333333333333317
+      },
+      "distance_from_human": {
+        "arc_jensen_shannon_distance": 0.6630985483612987,
+        "turning_point_mean_absolute_distance": 0.2868822198018689
+      },
+      "lexical_diversity": {
+        "corpus_distinct_1": 0.44364508393285373,
+        "corpus_distinct_2": 0.7995169082125604,
+        "corpus_token_entropy": 4.605937175183212,
+        "mean_story_token_count": 139.0,
+        "mean_story_type_token_ratio": 0.6668886196057332,
+        "pairwise_bigram_jaccard_distance": 0.8831203977169292,
+        "pairwise_token_jaccard_distance": 0.7547444963841944,
+        "sample_count": 3
+      },
+      "mean_affective_curve": {
+        "arousal": [
+          0.5733333333333334,
+          0.5656140350877193,
+          0.5578947368421052,
+          0.5501754385964912,
+          0.5424561403508772,
+          0.5347368421052632,
+          0.5270175438596492,
+          0.519298245614035,
+          0.511578947368421,
+          0.503859649122807,
+          0.5014035087719299,
+          0.5042105263157896,
+          0.5070175438596491,
+          0.5098245614035087,
+          0.5126315789473684,
+          0.515438596491228,
+          0.5182456140350877,
+          0.5210526315789473,
+          0.523859649122807,
+          0.5266666666666667
+        ],
+        "valence": [
+          0.65,
+          0.6342105263157894,
+          0.6184210526315789,
+          0.6026315789473684,
+          0.5868421052631579,
+          0.5710526315789474,
+          0.5552631578947368,
+          0.5394736842105263,
+          0.5236842105263158,
+          0.5078947368421053,
+          0.5066666666666667,
+          0.52,
+          0.5333333333333333,
+          0.5466666666666667,
+          0.5599999999999999,
+          0.5733333333333334,
+          0.5866666666666667,
+          0.6,
+          0.6133333333333333,
+          0.6266666666666666
+        ]
+      },
+      "plot_diversity": {
+        "duplicate_signature_count": 0,
+        "duplicate_signature_rate": 0.0,
+        "normalized_signature_entropy": 0.9999999999999998,
+        "sample_count": 3,
+        "signature_entropy": 1.0986122886681096,
+        "top_signatures": [
+          {
+            "count": 1,
+            "signature": "Riches to Rags|single_track|linear|low_tension|low_agency|low_resolution"
+          },
+          {
+            "count": 1,
+            "signature": "Riches to Rags|single_track|linear|low_tension|low_agency|resolution"
+          },
+          {
+            "count": 1,
+            "signature": "Rags to Riches|single_track|linear|low_tension|low_agency|low_resolution"
+          }
+        ],
+        "unique_signature_count": 3
+      },
+      "sample_count": 3,
+      "turning_points": {
+        "mean_normalized_position": {
+          "tp1": 0.47222222222222215,
+          "tp2": 0.7666666666666666,
+          "tp3": 0.6944444444444443,
+          "tp4": 0.7000000000000001,
+          "tp5": 0.5388888888888889
+        },
+        "ordering_violation_count": 3,
+        "ordering_violation_rate": 1.0,
+        "sample_count": 3,
+        "std_normalized_position": {
+          "tp1": 0.17123372230469378,
+          "tp2": 0.20548046676563256,
+          "tp3": 0.27498597046143514,
+          "tp4": 0.42426406871192857,
+          "tp5": 0.20472806414098085
+        }
+      },
+      "warning_count": 3
+    }
+  },
+  "failures": [],
+  "hypothesis_checks": {
+    "H1": "Multilingual minus monolingual normalized arc entropy = 0.5794.",
+    "H2": "Multilingual minus monolingual token Jaccard diversity = -0.0039.",
+    "H3": "Arc-entropy gain over monolingual: language shift 0.5794 versus persona-only 0.0000.",
+    "H4": "Turning-point timing is not interpreted: 8/9 annotations were non-monotonic.",
+    "H5": "Multilingual minus monolingual human arc distance = -0.0314; diversity and human-likeness are reported separately.",
+    "H6": "Unavailable: at least two narrative parameter cells are required to test parameter sensitivity.",
+    "H7": "Highest repeated plot-signature rate = 0.4444 in parameter cell `neutral`."
+  },
+  "metadata": {
+    "affective_method": "small built-in proxy lexicon",
+    "analyzed_at": "2026-08-23T08:42:15.609912+00:00",
+    "conditions_requested": [
+      "monolingual",
+      "multicultural",
+      "multilingual"
+    ],
+    "failure_count": 0,
+    "generation_method": "plain-prose generation followed by a separate constrained annotation pass",
+    "languages_requested": [
+      "en",
+      "zh",
+      "ja"
+    ],
+    "model": "orca-mini:latest",
+    "parameter_precondition": "Narrative parameters are tracked as an orthogonal factor so style, plot complexity, suspense, affective range, and temporal structure are not conflated with prompt language.",
+    "provider": "ollama",
+    "request_count": 9,
+    "result_tier": "fresh_single_model_local_experiment",
+    "successful_count": 9
+  },
+  "narrative_parameters": {
+    "neutral": {
+      "affective_proxy_coverage": {
+        "recognized_token_count": 10,
+        "sentence_count": 61
+      },
+      "arc_distribution": {
+        "counts": {
+          "Cinderella": 0,
+          "Double Man in Hole": 0,
+          "Icarus": 0,
+          "Man in Hole": 0,
+          "Oedipus": 0,
+          "Rags to Riches": 1,
+          "Riches to Rags": 8
+        },
+        "entropy": 0.34883209584303193,
+        "normalized_entropy": 0.1846493945750204,
+        "probabilities": {
+          "Cinderella": 0.0,
+          "Double Man in Hole": 0.0,
+          "Icarus": 0.0,
+          "Man in Hole": 0.0,
+          "Oedipus": 0.0,
+          "Rags to Riches": 0.1111111111111111,
+          "Riches to Rags": 0.8888888888888888
+        },
+        "sample_count": 9
+      },
+      "discourse_features": {
+        "mean_agency_markers_per_100_tokens": 0.0,
+        "mean_arousal_range": 0.0722222222222222,
+        "mean_flattening_proxy": 0.3433498513780478,
+        "mean_negative_vad_rate": 0.25925925925925924,
+        "mean_positive_vad_rate": 0.2962962962962963,
+        "mean_suspense_proxy": 0.0027938185895891197,
+        "mean_tension_markers_per_100_tokens": 0.27938185895891193,
+        "mean_valence_range": 0.2744444444444445
+      },
+      "lexical_diversity": {
+        "corpus_distinct_1": 0.2858176555716353,
+        "corpus_distinct_2": 0.6533139111434815,
+        "corpus_token_entropy": 5.039698695896506,
+        "mean_story_token_count": 153.55555555555554,
+        "mean_story_type_token_ratio": 0.6437188544925748,
+        "pairwise_bigram_jaccard_distance": 0.9095245941190506,
+        "pairwise_token_jaccard_distance": 0.7549868352802274,
+        "sample_count": 9
+      },
+      "mean_affective_curve": {
+        "arousal": [
+          0.5244444444444444,
+          0.5218713450292398,
+          0.5192982456140351,
+          0.5167251461988305,
+          0.515438596491228,
+          0.5192982456140351,
+          0.523157894736842,
+          0.5270175438596492,
+          0.5333040935672515,
+          0.5329532163742691,
+          0.5334795321637427,
+          0.5348830409356725,
+          0.5386549707602338,
+          0.5310526315789473,
+          0.5164327485380117,
+          0.5172514619883041,
+          0.5252631578947368,
+          0.530233918128655,
+          0.5223391812865497,
+          0.5144444444444445
+        ],
+        "valence": [
+          0.55,
+          0.5447368421052632,
+          0.5394736842105263,
+          0.5342105263157895,
+          0.5317543859649123,
+          0.5405263157894736,
+          0.5492982456140351,
+          0.5580701754385965,
+          0.5457894736842106,
+          0.5152631578947369,
+          0.5046783625730994,
+          0.5140350877192983,
+          0.5247953216374269,
+          0.5018713450292398,
+          0.4985964912280702,
+          0.5290058479532163,
+          0.5607017543859648,
+          0.5614035087719299,
+          0.5340350877192983,
+          0.5066666666666666
+        ]
+      },
+      "plot_diversity": {
+        "duplicate_signature_count": 4,
+        "duplicate_signature_rate": 0.4444444444444444,
+        "normalized_signature_entropy": 0.9264576403085686,
+        "sample_count": 9,
+        "signature_entropy": 1.4648163848908131,
+        "top_signatures": [
+          {
+            "count": 3,
+            "signature": "Riches to Rags|single_track|linear|low_tension|low_agency|low_resolution"
+          },
+          {
+            "count": 3,
+            "signature": "Riches to Rags|single_track|linear|tension|low_agency|resolution"
+          },
+          {
+            "count": 1,
+            "signature": "Riches to Rags|single_track|linear|tension|low_agency|low_resolution"
+          },
+          {
+            "count": 1,
+            "signature": "Riches to Rags|single_track|linear|low_tension|low_agency|resolution"
+          },
+          {
+            "count": 1,
+            "signature": "Rags to Riches|single_track|linear|low_tension|low_agency|low_resolution"
+          }
+        ],
+        "unique_signature_count": 5
+      },
+      "sample_count": 9,
+      "turning_points": {
+        "mean_normalized_position": {
+          "tp1": 0.3381834215167548,
+          "tp2": 0.6338624338624338,
+          "tp3": 0.6609347442680775,
+          "tp4": 0.7994708994708994,
+          "tp5": 0.48298059964726625
+        },
+        "ordering_violation_count": 8,
+        "ordering_violation_rate": 0.8888888888888888,
+        "sample_count": 9,
+        "std_normalized_position": {
+          "tp1": 0.14540373956572106,
+          "tp2": 0.22798155317776306,
+          "tp3": 0.27219838280284475,
+          "tp4": 0.28332728146526337,
+          "tp5": 0.29514731662530064
+        }
+      },
+      "warning_count": 8
+    }
+  }
+}

@@ -1,0 +1,245 @@
+phase: 3_code_planning
+completed: true
+project_root: multilingual-storytelling-lab
+runtime: Python 3.9+ standard library
+design_goal: >-
+  Build a transparent, dependency-free reference implementation of the merged
+  experiment that can reproduce aggregate findings from released narrative data,
+  generate new multilingual-condition stories with local Ollama, and save every
+  input, raw response, metric, and caveat needed to audit the result.
+
+architecture:
+  package: src/multistory
+  principles:
+    - Keep generation providers separate from experimental design and analysis.
+    - Make every metric a pure function with edge-case tests.
+    - Preserve raw model output even when parsing fails.
+    - Never silently substitute fixture results for a model run.
+    - Use a stable JSON schema so human annotations can replace model metadata.
+    - Label paper reproduction, exploratory extension, and software demo distinctly.
+
+files:
+  - path: pyproject.toml
+    responsibility: >-
+      Define a zero-runtime-dependency Python package, console script, supported
+      Python version, and unittest discovery settings. No build step is required
+      for direct execution from the repository.
+    dependencies: []
+  - path: src/multistory/__init__.py
+    responsibility: Export version and public schema names.
+  - path: src/multistory/schema.py
+    responsibility: >-
+      Define dataclasses for StoryBrief, LanguageProfile, GenerationRequest,
+      StoryRecord, and RunFailure. Validate allowed conditions and arcs, require
+      exactly five TP values, check positive target lengths, and support explicit
+      dictionary serialization. Parsing must accept either a direct JSON object or
+      JSON contained in a fenced block, reject missing story text, and retain model
+      metadata. TP locations are one-based sentence positions to match the released
+      annotations.
+    interfaces:
+      - StoryBrief.from_dict(mapping) -> StoryBrief
+      - StoryRecord.from_model_response(text, request) -> StoryRecord
+      - StoryRecord.to_dict() -> dict
+      - validate_tp_positions(positions, sentence_count) -> list[str]
+  - path: src/multistory/prompts.py
+    responsibility: >-
+      Store three language profiles and render matched prompt templates for the
+      monolingual, multicultural, and multilingual conditions. Every rendered
+      prompt contains the identical brief values and output contract. The English
+      control uses three neutral paraphrases. The multicultural control stays in
+      English but swaps persona context. The multilingual treatment uses human-
+      checked English, Simplified Chinese, and Japanese instructions. All variants
+      request the final story in English so downstream lexical metrics are directly
+      comparable without introducing a translation model. Prompt IDs encode brief,
+      condition, language, and replicate.
+    interfaces:
+      - default_language_profiles() -> tuple[LanguageProfile, ...]
+      - build_requests(briefs, conditions, replicates) -> list[GenerationRequest]
+      - render_prompt(request) -> str
+  - path: src/multistory/providers.py
+    responsibility: >-
+      Declare a generation Provider protocol, implement OllamaProvider through
+      urllib.request against localhost /api/generate, and implement FixtureProvider
+      for deterministic tests. Ollama requests include model, prompt, stream=false,
+      temperature, seed, and JSON format. Network and malformed-response failures
+      become descriptive ProviderError exceptions. No external API is contacted.
+    interfaces:
+      - Provider.generate(request, prompt) -> str
+      - OllamaProvider(model, base_url, temperature, timeout_seconds)
+      - FixtureProvider(records_by_prompt_id)
+  - path: src/multistory/text.py
+    responsibility: >-
+      Supply Unicode-aware word tokenization, conservative sentence splitting,
+      n-grams, Shannon entropy, Jaccard distance, mean, population standard
+      deviation, linear interpolation, and Jensen-Shannon distance. Chinese and
+      Japanese prompts are metadata only because the generated story is requested
+      in English. Functions must return well-defined zero values for empty inputs
+      or raise ValueError when silence would hide invalid experimental data.
+  - path: src/multistory/diversity.py
+    responsibility: >-
+      Implement the multilingual paper's exact finite-sample maximum entropy and
+      normalized categorical entropy. Add story-specific lexical measurements:
+      type-token ratio, distinct-1, distinct-2, token entropy, and mean pairwise
+      Jaccard distance over token and bigram sets. Report sample count alongside
+      every aggregate to prevent misleading comparisons.
+    interfaces:
+      - categorical_entropy(labels) -> float
+      - maximum_entropy(sample_count, category_count) -> float
+      - normalized_entropy(labels, category_count) -> float
+      - lexical_metrics(text) -> dict
+      - corpus_diversity(texts) -> dict
+  - path: src/multistory/narrative.py
+    responsibility: >-
+      Implement the narrative paper's macro/meso/micro analysis. Compute seven-arc
+      distributions, normalized TP positions, TP order violations, affective word
+      scores, fixed-grid emotion curves, and reference distances. A documented
+      compact valence/arousal lexicon permits an offline smoke run; optionally load
+      a tab-separated word/valence/arousal file supplied by the user. Do not call
+      the proxy a reproduction of NRC VAD.
+    interfaces:
+      - arc_distribution(records_or_labels) -> dict
+      - turning_point_summary(records) -> dict
+      - load_vad_lexicon(path=None) -> dict
+      - affective_curve(text, lexicon, bins=20) -> dict
+      - compare_to_human(condition_summary, human_summary) -> dict
+  - path: src/multistory/datasets.py
+    responsibility: >-
+      Read and validate narratives.json, ground_truth_arc.json, and
+      ground_truth_tp.json. Join only exact IDs and expose excluded counts. Convert
+      each official example to a common reference-record mapping without inventing
+      annotations. Derive one aggregate summary for human records and one for GPT
+      records, including arc counts, normalized entropy, TP means, and ordering
+      violation rates.
+    interfaces:
+      - load_json(path) -> object
+      - load_narrative_reference(data_dir) -> ReferenceDataset
+      - summarize_reference(dataset) -> dict
+  - path: src/multistory/experiment.py
+    responsibility: >-
+      Orchestrate prompt generation, provider calls, parse validation, checkpointed
+      raw output, metric aggregation, and human-reference comparisons. Continue
+      other requests after an individual failure, write checkpoint after every
+      attempt, and exit non-zero only when no stories were successfully generated
+      or required reference data is invalid. Seeds are derived deterministically
+      from a base seed plus request index and are stored in raw output.
+    interfaces:
+      - run_baseline(data_dir) -> dict
+      - run_generation(provider, briefs, output_path, options) -> dict
+      - analyze_generation(records, baseline) -> dict
+  - path: src/multistory/reporting.py
+    responsibility: >-
+      Serialize stable, UTF-8 JSON and construct readable Markdown tables for arc
+      distributions, TP positions, diversity, human-reference distance, failures,
+      and limitations. Values are rounded only for Markdown; JSON retains numeric
+      precision. Every report includes run type, timestamp, model, conditions,
+      sample size, and interpretation tier.
+    interfaces:
+      - write_json(path, value) -> None
+      - baseline_markdown(result) -> str
+      - experiment_markdown(result) -> str
+      - write_text(path, value) -> None
+  - path: src/multistory/cli.py
+    responsibility: >-
+      Provide baseline, experiment, analyze, and full subcommands using argparse.
+      Baseline reads official data. Experiment calls Ollama. Analyze reprocesses an
+      existing raw JSON file. Full runs baseline then generation and analysis.
+      Arguments include --data-dir, --results-dir, --model, --conditions,
+      --languages, --replicates, --seed, --temperature, --timeout, and --briefs.
+  - path: main.py
+    responsibility: Add repository src directory to sys.path and invoke CLI main.
+  - path: examples/briefs.json
+    responsibility: >-
+      Define two neutral fictional briefs with no requested arc, enabling the model
+      to select structure. The default quick run uses one brief and three language
+      profiles per condition; larger runs can use both.
+  - path: tests/test_schema.py
+    responsibility: Test valid parsing, fenced JSON, missing fields, and TP warnings.
+  - path: tests/test_diversity.py
+    responsibility: >-
+      Test entropy at zero and maximum diversity, including k<m, k=m, and k>m;
+      verify identical stories have zero pairwise distance and different stories
+      have positive distance.
+  - path: tests/test_narrative.py
+    responsibility: >-
+      Test arc distributions sum to one, TP normalization, violation detection,
+      affective interpolation length, and zero Jensen-Shannon distance for identical
+      distributions.
+  - path: tests/test_prompts.py
+    responsibility: >-
+      Verify every condition keeps the brief fixed, multilingual prompts contain
+      expected scripts, multicultural prompts remain English, prompt IDs are unique,
+      and output schema is present.
+  - path: tests/test_datasets.py
+    responsibility: Test reference joining and missing-ID accounting on tiny fixtures.
+  - path: README.md
+    responsibility: >-
+      Explain the merged hypothesis, source papers, installation, commands, output
+      interpretation, known deviations, and a publication-quality extension path.
+
+execution_order:
+  - step: 1
+    action: Implement package schema and prompts, then run their unit tests.
+  - step: 2
+    action: Implement mathematical and text primitives, then edge-case tests.
+  - step: 3
+    action: Implement official-data loader and reproduce aggregate baseline results.
+  - step: 4
+    action: Implement Ollama provider and run one JSON compliance probe.
+  - step: 5
+    action: Implement experiment orchestration with per-request checkpoints.
+  - step: 6
+    action: Run the 9-sample core experiment on one brief and three conditions.
+  - step: 7
+    action: Analyze successful generations and write JSON and Markdown results.
+  - step: 8
+    action: Run all tests and inspect final artifacts for claim labels and counts.
+
+verification:
+  unit:
+    command: python -m unittest discover -s tests -v
+    pass_condition: all tests pass with no network access
+  baseline:
+    command: python main.py baseline
+    pass_condition: >-
+      both human and GPT summaries are produced; distributions sum to one; joined
+      and excluded counts are reported; report is written to results directory
+  provider_probe:
+    command: python main.py experiment --model orca-mini:latest --conditions monolingual --replicates 1
+    pass_condition: at least one parseable StoryRecord or an actionable saved failure
+  combined_run:
+    command: >-
+      python main.py full --model orca-mini:latest --conditions monolingual
+      multicultural multilingual --replicates 1
+    pass_condition: >-
+      raw checkpoint, analyzed JSON, and Markdown report exist and disclose the
+      exact number of successful and failed generations
+
+expected_runtime_and_cost:
+  dependencies: none beyond Python and optional local Ollama
+  baseline: under ten seconds on a typical laptop
+  core_experiment: model-dependent; nine generations for one brief at one replicate
+  external_api_cost: zero
+  disk: dominated by two paper PDFs, official corpus, and local model files
+
+failure_handling:
+  - Invalid provider response is recorded with prompt ID, exception, and raw text.
+  - A partially completed run can be analyzed and does not discard successful stories.
+  - Empty condition groups appear as unavailable rather than as zero diversity.
+  - Missing optional VAD file falls back to the clearly labeled proxy lexicon.
+  - Missing Ollama fails only generation commands; baseline reproduction remains runnable.
+  - Timeouts are configurable and individual timeouts do not erase the checkpoint.
+
+result_interpretation:
+  positive_H1: >-
+    A higher multilingual arc entropy within this model and brief supports an
+    exploratory language-diversity effect; it does not establish a universal effect.
+  null_H1: >-
+    No observed increase can reflect model capacity, sample size, prompt translation,
+    or genuine absence; report all possibilities and raw results.
+  human_distance: >-
+    Lower distance indicates closer aggregate structure or pacing only. It is not a
+    quality judgment and cannot classify individual stories as human-written.
+  persona_contrast: >-
+    If multilingual exceeds multicultural while the fixed brief and output language
+    are held constant, the pattern is more consistent with prompt-language effects
+    than with persona wording alone.

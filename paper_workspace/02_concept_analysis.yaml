@@ -1,0 +1,113 @@
+phase: 2_concept_analysis
+completed: true
+
+concepts:
+  prompt_language:
+    definition: The natural language used to express the generation instructions.
+    operationalization: profile.prompt_language in every generated StoryRecord.
+    causal_role: primary intervention
+  cultural_persona:
+    definition: A compact culturally grounded identity embedded in the instruction.
+    operationalization: persona fields for name, location, birthplace, and favorite food.
+    causal_role: matched control and potential mediator
+  narrative_structure:
+    levels:
+      macro: seven-class story arc
+      meso: five ordered turning points
+      micro: sentence-level valence and arousal trajectory
+  diversity:
+    categorical: normalized entropy of realized or declared arcs
+    lexical: mean pairwise Jaccard distance, distinct-1, distinct-2, token entropy
+    emotional: pairwise distance between interpolated affective curves
+  human_likeness:
+    definition: Distance from aggregate human stories, not a binary detector score.
+    components:
+      - Jensen-Shannon distance from human arc distribution
+      - mean absolute distance from human normalized turning-point positions
+      - optional affective curve distance when a compatible lexicon is supplied
+    warning: Similarity to aggregate human statistics does not prove human authorship or quality.
+
+hypotheses:
+  H1:
+    statement: Multilingual prompting yields higher narrative-arc entropy than repeated English prompting.
+    primary_metric: normalized_arc_entropy
+    comparison: multilingual > monolingual
+  H2:
+    statement: Multilingual prompting yields higher pairwise lexical diversity than repeated English prompting.
+    primary_metric: pairwise_jaccard_distance
+    comparison: multilingual > monolingual
+  H3:
+    statement: Language effects exceed culture-persona-only effects.
+    primary_metric: delta in narrative and lexical diversity
+    comparison: multilingual - monolingual > multicultural - monolingual
+  H4:
+    statement: At least one prompt-language condition changes turning-point timing relative to the English control.
+    primary_metric: mean absolute TP timing difference
+    comparison: each non-English language versus English
+  H5:
+    statement: Increased diversity need not imply increased human-likeness.
+    primary_metric: relationship between entropy gain and human-reference distance
+    expected_direction: no forced direction; report descriptively
+
+identifiability:
+  controlled:
+    - model and model parameters
+    - story brief
+    - target output length
+    - requested output language
+    - JSON output schema
+    - generation order recorded in raw results
+  intentionally_varied:
+    - prompt language
+    - persona/cultural frame according to condition
+    - English paraphrase in monolingual controls
+  not_fully_controlled:
+    - stochastic model sampling
+    - imperfect semantic equivalence of translated prompts
+    - local model multilingual competence
+    - model compliance with declared arc and TP metadata
+
+measurement_validity:
+  strongest:
+    - official corpus source labels
+    - released human arc annotations
+    - released human turning-point annotations
+    - exact categorical entropy calculations
+  moderate:
+    - lexical diversity and overlap metrics
+    - sentence-length and punctuation-based statistics
+  exploratory:
+    - model-declared story arcs
+    - model-declared turning points
+    - small built-in affective lexicon
+  publication_upgrade:
+    - blind independent arc annotation by at least three annotators
+    - blind turning-point annotation with agreement statistics
+    - licensed full NRC VAD lexicon
+    - multiple models and random seeds
+    - back-translation or native-language evaluation
+    - uncertainty intervals and preregistered hypothesis tests
+
+data_flow:
+  - stage: reference
+    consumes: official narrative JSON files
+    produces: human and GPT baseline distributions
+  - stage: prompt
+    consumes: StoryBrief and condition profiles
+    produces: rendered prompts with stable identifiers
+  - stage: generation
+    consumes: rendered prompts
+    produces: raw model responses and validated StoryRecords
+  - stage: analysis
+    consumes: StoryRecords and reference summary
+    produces: per-story and per-condition metrics
+  - stage: reporting
+    consumes: all metrics and run metadata
+    produces: JSON plus Markdown result artifacts
+
+ethical_considerations:
+  - Personas are experimental cues, not claims that a culture is homogeneous.
+  - Avoid ranking languages or cultures as intrinsically better storytellers.
+  - Report model-language competence failures separately from narrative differences.
+  - Generated text may reproduce cultural stereotypes; raw results must remain auditable.
+  - Human-likeness is descriptive and must not be used for authorship accusation.

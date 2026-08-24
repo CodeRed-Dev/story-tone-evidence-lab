@@ -1,0 +1,145 @@
+phase: 1_algorithm_extraction
+completed: true
+
+narrative_paper:
+  input:
+    corpus:
+      size: 1638
+      sources: [human, GPT]
+      unit: film synopsis represented as an ordered list of sentences
+    annotated_subset:
+      size: 440
+      labels_per_story: [story_arc, tp1, tp2, tp3, tp4, tp5]
+  taxonomy:
+    story_arcs:
+      - Rags to Riches
+      - Riches to Rags
+      - Man in Hole
+      - Double Man in Hole
+      - Icarus
+      - Cinderella
+      - Oedipus
+    turning_points:
+      tp1: Opportunity
+      tp2: Change of Plans
+      tp3: Point of No Return
+      tp4: Major Setback
+      tp5: Climax
+  algorithms:
+    - name: narrative_dataset_join
+      purpose: Combine narratives, story-arc labels, and turning-point labels by story ID.
+      steps:
+        - Load the three official JSON objects.
+        - Intersect identifiers while keeping source metadata from narratives.json.
+        - Validate that every retained synopsis is a non-empty sentence list.
+        - Preserve label values exactly while standardizing source to human or GPT.
+      failure_conditions:
+        - missing identifier
+        - invalid source
+        - missing or non-numeric turning point
+    - name: arc_distribution
+      purpose: Measure structural preferences for each source or experimental condition.
+      steps:
+        - Count labels across the seven allowed story arcs.
+        - Divide every count by the number of valid labeled stories.
+        - Emit both counts and probabilities so sample size remains visible.
+    - name: normalized_turning_point_positions
+      purpose: Compare pacing across stories with different sentence counts.
+      formula: normalized_position = annotated_sentence_position / number_of_sentences
+      steps:
+        - For every labeled story, obtain synopsis sentence count N.
+        - For each TP, divide the one-based (possibly averaged) position by N.
+        - Average positions per source and report standard deviation.
+        - Report the rate at which TP ordering is non-monotonic.
+    - name: affective_curve
+      purpose: Represent micro-level emotional dynamics across normalized story time.
+      paper_method:
+        - identify the protagonist with GPT-4
+        - assign three emotion adjectives per sentence with GPT-4
+        - map adjectives through NRC VAD and average scores
+        - interpolate variable-length sequences and average them
+      local_method:
+        - tokenize each sentence
+        - average recognized word valence and arousal values
+        - map unrecognized or neutral sentences to the scale midpoint
+        - linearly interpolate every story onto a fixed grid
+        - average curves within each condition
+      deviation: Built-in lexicon is a transparent proxy, not an NRC VAD reproduction.
+
+multilingual_paper:
+  input:
+    fixed_query: one semantic task held constant across conditions
+    languages_primary: [English, Chinese, Japanese]
+    samples_per_condition: 3
+  interventions:
+    monolingual:
+      definition: Multiple English paraphrases without a cultural persona.
+    multicultural:
+      definition: English prompts containing culturally grounded language personas.
+    multilingual:
+      definition: Matched prompts translated into English, Chinese, and Japanese.
+  algorithms:
+    - name: condition_prompt_construction
+      steps:
+        - Serialize the same title, genre, setting, target length, and output contract.
+        - Select a condition and language profile.
+        - Add basic language identity or enhanced persona framing.
+        - Render instructions in the chosen prompt language.
+        - Require a machine-readable JSON object and an English final story for shared metrics.
+    - name: categorical_entropy
+      input: list of categorical outcomes
+      formula: H = -sum_i p_i * log(p_i)
+      zero_probability_convention: 0 * log(0) = 0
+    - name: exact_maximum_entropy
+      purpose: Normalize entropy when k samples are allocated across m categories.
+      formula_components:
+        q: floor(k / m)
+        r: k - m * q
+        p_high: (q + 1) / k
+        p_low: q / k
+      formula: Hmax = -r*p_high*log(p_high) - (m-r)*p_low*log(p_low)
+      note: Terms with probability zero are omitted.
+    - name: normalized_entropy
+      formula: normalized_H = H / Hmax
+      range: [0, 1]
+      edge_cases:
+        - Return 0 for no samples, one sample, one category, or zero Hmax.
+        - Validate k and m as positive integers when directly supplied.
+    - name: perspective_diversity_adaptation
+      paper_method: SBERT mean pairwise cosine dissimilarity normalized by the largest size-k subset.
+      local_story_adaptation: Mean pairwise Jaccard distance over token and bigram sets.
+      reason: Dependency-free, deterministic, inspectable, and applicable to prose.
+
+combined_algorithm:
+  name: multilingual_narrative_experiment
+  pseudocode:
+    - Load one or more StoryBrief objects.
+    - For each brief, condition, and language profile, build a controlled prompt.
+    - Generate a JSON StoryRecord with story text, declared arc, and five TP sentence positions.
+    - Validate and persist raw outputs before analysis.
+    - Compute per-story lexical, affective, structural, and pacing measurements.
+    - Aggregate measurements by condition.
+    - Compute normalized arc entropy and pairwise story diversity.
+    - Load the official human and GPT reference annotations.
+    - Compute Jensen-Shannon distance of each condition from the human arc distribution.
+    - Compute mean absolute difference from human TP timing.
+    - Compare multilingual and multicultural conditions against monolingual controls.
+    - Save machine-readable JSON and a Markdown report with caveats.
+
+required_outputs:
+  - results/baseline_reproduction.json
+  - results/baseline_reproduction.md
+  - results/experiment_raw.json
+  - results/experiment_results.json
+  - results/experiment_results.md
+
+reproduction_tiers:
+  baseline:
+    evidence: official released data
+    claim_strength: direct local analysis of paper data
+  multilingual_extension:
+    evidence: freshly generated stories from one installed Ollama model
+    claim_strength: exploratory local experiment
+  dry_run:
+    evidence: deterministic fixture records
+    claim_strength: software validation only

@@ -1,0 +1,71 @@
+project:
+  name: Multilingual Storytelling Lab
+  status: implementation_selected
+  research_question: >-
+    When the same narrative brief is expressed through different prompt languages,
+    do local language models produce stories with measurably different narrative
+    arcs, turning-point timing, affective trajectories, and lexical content, and do
+    any of those conditions move closer to or farther from human-written stories?
+  contribution: >-
+    This project connects multilingual prompting as an experimental intervention
+    with hierarchical narrative analysis as the outcome framework. Neither source
+    paper runs this exact experiment.
+
+papers:
+  - key: narratives
+    title: Are Large Language Models Capable of Generating Human-Level Narratives?
+    venue: EMNLP 2024
+    url: https://aclanthology.org/2024.emnlp-main.978/
+    local_pdf: papers/human_level_narratives.pdf
+    official_repository: https://github.com/PlusLabNLP/Narrative-Discourse
+    role: >-
+      Supplies the seven story arcs, five turning points, emotional-arc analysis,
+      official human/GPT narrative data, and the human-likeness reference baseline.
+  - key: multilingual
+    title: Multilingual Prompting for Improving LLM Generation Diversity
+    venue: EMNLP 2025
+    url: https://aclanthology.org/2025.emnlp-main.324/
+    local_pdf: papers/multilingual_prompting.pdf
+    official_repository: https://github.com/mangocyann/Multilingual-Prompting-for-Improving-LLM-Generation-Diversity
+    role: >-
+      Supplies monolingual, multicultural, and multilingual interventions plus
+      entropy normalization for comparing diversity under a fixed sample budget.
+
+selection_rationale:
+  scientific_fit: 5
+  local_feasibility: 5
+  measurable_outputs: 5
+  novelty: 5
+  reproducibility: 4
+  notes:
+    - The two papers have complementary independent and dependent variables.
+    - Official story data enables a genuine baseline reproduction without an API.
+    - Local Ollama models permit a new experiment without transmitting data.
+    - Semantic narrative labeling is exposed as explicit metadata in generation and can be replaced by human or model annotation later.
+
+experimental_conditions:
+  - id: monolingual
+    description: Three English phrasings of the same brief.
+    isolates: ordinary sampling and prompt-wording variation
+  - id: multicultural
+    description: English prompts with English, Chinese, and Japanese cultural personas.
+    isolates: cultural/persona framing without changing prompt language
+  - id: multilingual
+    description: Semantically matched English, Chinese, and Japanese prompts.
+    isolates: prompt-language shift plus the cultural frame carried by language
+
+primary_outcomes:
+  - normalized story-arc entropy
+  - pairwise lexical Jaccard distance
+  - distinct-1 and distinct-2
+  - turning-point timing and ordering
+  - valence and arousal proxy curves
+  - Jensen-Shannon distance from the official human arc distribution
+  - distance from human turning-point timing
+
+interpretation_boundaries:
+  - This is a synthesis and extension, not a claim that either paper ran the joint experiment.
+  - A local model result does not generalize to all language models.
+  - Prompt language and culture are entangled unless contrasted with the multicultural control.
+  - Built-in emotion scores are lightweight proxies; an NRC VAD-compatible lexicon can be supplied for closer reproduction.
+  - Generated arc and turning-point metadata should be independently annotated before publication-quality conclusions.

@@ -1,0 +1,118 @@
+{
+  "dataset": {
+    "arc_label_count": 439,
+    "corpus_size": 1638,
+    "corpus_source_counts": {
+      "gpt": 819,
+      "human": 819
+    },
+    "incomplete_annotation_count": 0,
+    "joined_annotation_count": 439,
+    "missing_narrative_count": 0,
+    "turning_point_label_count": 439
+  },
+  "generated_at": "2026-08-23T08:42:15.570248+00:00",
+  "human_vs_gpt": {
+    "arc_jensen_shannon_distance": 0.2742709566068875,
+    "gpt_minus_human_tp_position": {
+      "tp1": 0.013666913398078906,
+      "tp2": 0.008645109984878496,
+      "tp3": -0.03153571936064786,
+      "tp4": -0.09296341153099119,
+      "tp5": -0.1137841903208009
+    }
+  },
+  "result_tier": "direct_local_analysis_of_official_released_annotations",
+  "sources": {
+    "gpt": {
+      "arc_distribution": {
+        "counts": {
+          "Cinderella": 41,
+          "Double Man in Hole": 30,
+          "Icarus": 7,
+          "Man in Hole": 121,
+          "Oedipus": 4,
+          "Rags to Riches": 31,
+          "Riches to Rags": 3
+        },
+        "entropy": 1.4026634284986013,
+        "normalized_entropy": 0.7208463371773695,
+        "probabilities": {
+          "Cinderella": 0.1729957805907173,
+          "Double Man in Hole": 0.12658227848101267,
+          "Icarus": 0.029535864978902954,
+          "Man in Hole": 0.510548523206751,
+          "Oedipus": 0.016877637130801686,
+          "Rags to Riches": 0.1308016877637131,
+          "Riches to Rags": 0.012658227848101266
+        },
+        "sample_count": 237
+      },
+      "sample_count": 237,
+      "turning_points": {
+        "mean_normalized_position": {
+          "tp1": 0.1425628950929039,
+          "tp2": 0.27473372659822454,
+          "tp3": 0.44670928764604484,
+          "tp4": 0.5733911951806302,
+          "tp5": 0.7657666762705845
+        },
+        "ordering_violation_count": 20,
+        "ordering_violation_rate": 0.08438818565400844,
+        "sample_count": 237,
+        "std_normalized_position": {
+          "tp1": 0.05995406959627476,
+          "tp2": 0.07558590606296706,
+          "tp3": 0.09555644734076169,
+          "tp4": 0.10530846208168508,
+          "tp5": 0.10001722839077852
+        }
+      }
+    },
+    "human": {
+      "arc_distribution": {
+        "counts": {
+          "Cinderella": 31,
+          "Double Man in Hole": 42,
+          "Icarus": 10,
+          "Man in Hole": 63,
+          "Oedipus": 19,
+          "Rags to Riches": 9,
+          "Riches to Rags": 28
+        },
+        "entropy": 1.7612372316356502,
+        "normalized_entropy": 0.9051313789553933,
+        "probabilities": {
+          "Cinderella": 0.15346534653465346,
+          "Double Man in Hole": 0.2079207920792079,
+          "Icarus": 0.04950495049504951,
+          "Man in Hole": 0.3118811881188119,
+          "Oedipus": 0.09405940594059406,
+          "Rags to Riches": 0.04455445544554455,
+          "Riches to Rags": 0.13861386138613863
+        },
+        "sample_count": 202
+      },
+      "sample_count": 202,
+      "turning_points": {
+        "mean_normalized_position": {
+          "tp1": 0.128895981694825,
+          "tp2": 0.26608861661334604,
+          "tp3": 0.4782450070066927,
+          "tp4": 0.6663546067116214,
+          "tp5": 0.8795508665913854
+        },
+        "ordering_violation_count": 11,
+        "ordering_violation_rate": 0.054455445544554455,
+        "sample_count": 202,
+        "std_normalized_position": {
+          "tp1": 0.05741064654044797,
+          "tp2": 0.08015397203929278,
+          "tp3": 0.10716009035616711,
+          "tp4": 0.1062934063596409,
+          "tp5": 0.07880829375526739
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,81 @@
+phase: 0_reference_search
+completed: true
+search_scope:
+  - official paper pages and PDFs
+  - official author repositories
+  - released datasets and annotations
+
+sources:
+  - title: Are Large Language Models Capable of Generating Human-Level Narratives?
+    kind: primary_paper
+    url: https://aclanthology.org/2024.emnlp-main.978/
+    local_pdf: papers/human_level_narratives.pdf
+    used_for:
+      - seven-class story arc taxonomy
+      - five turning-point definitions
+      - arousal and valence analysis
+      - human-versus-GPT-4 findings
+      - annotation and generation protocols
+  - title: Narrative-Discourse
+    kind: official_code_and_data
+    url: https://github.com/PlusLabNLP/Narrative-Discourse
+    license: Apache-2.0
+    used_for:
+      - official narratives.json corpus
+      - ground_truth_arc.json annotations
+      - ground_truth_tp.json annotations
+  - title: Multilingual Prompting for Improving LLM Generation Diversity
+    kind: primary_paper
+    url: https://aclanthology.org/2025.emnlp-main.324/
+    local_pdf: papers/multilingual_prompting.pdf
+    used_for:
+      - multilingual and multicultural experimental conditions
+      - normalized entropy metric
+      - language-set design
+      - control conditions and limitations
+  - title: Multilingual Prompting official repository
+    kind: official_repository
+    url: https://github.com/mangocyann/Multilingual-Prompting-for-Improving-LLM-Generation-Diversity
+    status_at_search: README only; implementation marked coming soon
+    implication: implementation reconstructed from paper methods
+
+candidate_screening:
+  - title: SelfCheckGPT
+    topic: hallucination detection
+    fit_score: 4.7
+    outcome: preserved as a separate initialized project after research direction changed
+  - title: Semantic Entropy
+    topic: hallucination detection
+    fit_score: 4.4
+    outcome: not selected for the first implementation
+  - title: AFlow
+    topic: agent workflow optimization
+    fit_score: 4.0
+    outcome: not selected because reliable reproduction requires broader model access and benchmarks
+  - title: AgentOptimizer
+    topic: agent function optimization
+    fit_score: 3.8
+    outcome: not selected because it is less directly connected to the storytelling-language question
+
+reuse_decisions:
+  direct_reuse:
+    - official narrative corpus and its annotations
+    - narrative taxonomy and metric definitions
+    - multilingual paper's experimental contrast and entropy formula
+  local_reimplementation:
+    - dependency-free metrics
+    - prompt builder for narrative generation
+    - Ollama provider
+    - report generation
+  deliberately_not_copied:
+    - unpublished multilingual repository code
+    - paper-specific proprietary model calls
+    - copyrighted NRC VAD lexicon values
+
+risks:
+  - risk: The official narrative arc and turning-point labels cover an annotated subset, not every story.
+    mitigation: join inputs by ID and report exact included counts.
+  - risk: Chinese and Japanese outputs cannot be compared with English-only word tokenization.
+    mitigation: request English story text in every condition while varying the instruction language; retain the prompt language as treatment metadata.
+  - risk: persona and language cues may remain partially confounded.
+    mitigation: include multicultural English-only prompts as a matched control.

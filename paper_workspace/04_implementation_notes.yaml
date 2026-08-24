@@ -1,0 +1,67 @@
+phase: 4_implementation
+completed: true
+
+implemented:
+  runtime: Python 3.9 standard library
+  provider: local Ollama over localhost HTTP
+  tests: 21 offline unit tests
+  official_data:
+    corpus_records: 1638
+    joined_annotation_records: 439
+  local_experiment:
+    model: orca-mini:latest
+    story_briefs: 1
+    conditions: [monolingual, multicultural, multilingual]
+    calls_per_condition: 3
+    successful_stories: 9
+    failed_stories: 0
+
+implementation_deviation:
+  original_plan: Ask generation calls to return prose and narrative metadata in one JSON object.
+  observed_problem: >-
+    Schema-constrained orca-mini copied the title as the complete story. Llama2 7B
+    produced prose but one constrained CPU call stalled for more than two hours.
+  final_design: >-
+    Generate unconstrained prose first, reject outputs below 40 words, then run a
+    separate constrained annotation pass on numbered sentences. Compose both
+    immutable outputs into the common StoryRecord schema.
+  methodological_benefit: >-
+    Separating generation from annotation better matches the narrative paper's
+    conceptual pipeline and prevents a JSON grammar from suppressing prose length.
+
+environment_issue:
+  symptom: CUDA device kernel image is invalid
+  mitigation: >-
+    Started a CPU-only Ollama worker on localhost port 11435 with
+    OLLAMA_LLM_LIBRARY=cpu_avx2 and OLLAMA_NO_CLOUD=1.
+  data_boundary: no external generation API was used
+
+quality_audit:
+  generation:
+    outcome: All nine stories passed the 40-word minimum.
+    warning: The Chinese-prompt story contained an assistant preamble and was short.
+  arc_annotation:
+    outcome: Seven stories were labeled Riches to Rags and two Rags to Riches.
+    warning: Labels are local-model annotations, not independent ground truth.
+  turning_points:
+    non_monotonic: 8
+    total: 9
+    decision: >-
+      Retain raw labels and diagnostic distances, count every violation, do not
+      silently sort or repair, and prohibit substantive timing interpretation.
+  emotion:
+    method: small transparent built-in VAD proxy
+    decision: Clearly distinguish from the source paper's GPT-4 plus NRC VAD method.
+
+captured_artifacts:
+  - results/baseline_reproduction.json
+  - results/baseline_reproduction.md
+  - results/experiment_raw.json
+  - results/experiment_results.json
+  - results/experiment_results.md
+
+headline_descriptive_results:
+  multilingual_minus_monolingual_arc_entropy: 0.5794
+  multilingual_minus_monolingual_token_jaccard_diversity: -0.0039
+  multilingual_minus_monolingual_human_arc_distance: -0.0314
+  inference_status: exploratory only; n=3 per condition

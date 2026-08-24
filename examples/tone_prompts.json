@@ -1,0 +1,86 @@
+[
+  {
+    "id": "interest_en_direct",
+    "task": "simple_interest",
+    "language": "en",
+    "input_tone": "direct",
+    "prompt": "Explain how simple interest works and give one numerical example. Use 100 to 150 words. Answer only in English."
+  },
+  {
+    "id": "interest_en_deferential",
+    "task": "simple_interest",
+    "language": "en",
+    "input_tone": "deferential",
+    "prompt": "Could you please explain how simple interest works and give one numerical example? I would appreciate your help. If possible, use 100 to 150 words and answer only in English."
+  },
+  {
+    "id": "interest_hi_direct",
+    "task": "simple_interest",
+    "language": "hi",
+    "input_tone": "direct",
+    "prompt": "साधारण ब्याज कैसे काम करता है, समझाओ और एक संख्यात्मक उदाहरण दो। उत्तर 100 से 150 शब्दों में और केवल हिंदी में दो।"
+  },
+  {
+    "id": "interest_hi_deferential",
+    "task": "simple_interest",
+    "language": "hi",
+    "input_tone": "deferential",
+    "prompt": "कृपया समझाइए कि साधारण ब्याज कैसे काम करता है और एक संख्यात्मक उदाहरण दीजिए। यदि संभव हो तो 100 से 150 शब्दों में केवल हिंदी में उत्तर दीजिए। आपकी सहायता की सराहना होगी।"
+  },
+  {
+    "id": "invitation_en_direct",
+    "task": "decline_invitation",
+    "language": "en",
+    "input_tone": "direct",
+    "prompt": "Write a short message declining a colleague's dinner invitation because of a prior commitment. Use 80 to 120 words. Answer only in English."
+  },
+  {
+    "id": "invitation_en_deferential",
+    "task": "decline_invitation",
+    "language": "en",
+    "input_tone": "deferential",
+    "prompt": "Could you please help me write a short message declining a colleague's dinner invitation because of a prior commitment? I would be grateful if you could use 80 to 120 words and answer only in English."
+  },
+  {
+    "id": "invitation_hi_direct",
+    "task": "decline_invitation",
+    "language": "hi",
+    "input_tone": "direct",
+    "prompt": "पहले से तय काम के कारण सहकर्मी के रात्रिभोज के निमंत्रण को अस्वीकार करने वाला छोटा संदेश लिखो। उत्तर 80 से 120 शब्दों में और केवल हिंदी में दो।"
+  },
+  {
+    "id": "invitation_hi_deferential",
+    "task": "decline_invitation",
+    "language": "hi",
+    "input_tone": "deferential",
+    "prompt": "क्या आप कृपया पहले से तय काम के कारण सहकर्मी के रात्रिभोज के निमंत्रण को विनम्रता से अस्वीकार करने वाला छोटा संदेश लिखने में सहायता करेंगे? यदि संभव हो तो 80 से 120 शब्दों में केवल हिंदी में उत्तर दीजिए। धन्यवाद।"
+  },
+  {
+    "id": "neighbor_en_direct",
+    "task": "noisy_neighbor",
+    "language": "en",
+    "input_tone": "direct",
+    "prompt": "Give practical advice for speaking to a neighbor who plays loud music late at night. Use 100 to 150 words. Answer only in English."
+  },
+  {
+    "id": "neighbor_en_deferential",
+    "task": "noisy_neighbor",
+    "language": "en",
+    "input_tone": "deferential",
+    "prompt": "Would you please give me practical advice for speaking to a neighbor who plays loud music late at night? If possible, use 100 to 150 words and answer only in English. Thank you for your help."
+  },
+  {
+    "id": "neighbor_hi_direct",
+    "task": "noisy_neighbor",
+    "language": "hi",
+    "input_tone": "direct",
+    "prompt": "देर रात तेज़ संगीत बजाने वाले पड़ोसी से बात करने की व्यावहारिक सलाह दो। उत्तर 100 से 150 शब्दों में और केवल हिंदी में दो।"
+  },
+  {
+    "id": "neighbor_hi_deferential",
+    "task": "noisy_neighbor",
+    "language": "hi",
+    "input_tone": "deferential",
+    "prompt": "क्या आप कृपया देर रात तेज़ संगीत बजाने वाले पड़ोसी से सम्मानपूर्वक बात करने की व्यावहारिक सलाह देंगे? यदि संभव हो तो 100 से 150 शब्दों में केवल हिंदी में उत्तर दीजिए। आपकी सहायता के लिए धन्यवाद।"
+  }
+]

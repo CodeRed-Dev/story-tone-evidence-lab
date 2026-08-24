@@ -1,0 +1,123 @@
+extension:
+  title: "AI narrative linearity and English/Hindi response tone"
+  status: implemented_as_local_extension
+  research_questions:
+    - id: RQ1
+      question: "Do AI-written narratives exhibit fewer retrospective or discontinuous temporal cues than human-written narratives?"
+    - id: RQ2
+      question: "Does asking the same task in Hindi cause a local LLM to use more surface politeness strategies than asking it in English?"
+    - id: RQ3
+      question: "Is any observed language effect distinct from the effect of writing the prompt itself in a direct versus deferential style?"
+
+papers:
+  storyscope:
+    title: "StoryScope: Investigating Idiosyncrasies in AI Fiction"
+    url: "https://arxiv.org/abs/2604.03136"
+    local_pdf: "papers/storyscope.pdf"
+    local_text: "papers/storyscope.txt"
+    official_code: "https://github.com/jenna-russell/storyscope"
+    source_measurement:
+      method: "304 learned/LLM-assisted narrative features across 10 dimensions"
+      relevant_features:
+        - "temporal complexity"
+        - "chronological discontinuity"
+        - "nonlinear framing for delayed disclosure"
+        - "temporal-order structure (linear/nonlinear/mixed)"
+        - "flashbacks and time jumps"
+      reported_direction: "Human fiction is more temporally complex and AI fiction is more tidy, single-track, and linear."
+      reported_values:
+        temporal_complexity: {human: 3.28, ai: 2.95, human_minus_ai: 0.34}
+        chronological_discontinuity: {human: 1.96, ai: 1.68, human_minus_ai: 0.28}
+        nonlinear_framing: {human: 2.58, ai: 2.31, human_minus_ai: 0.27}
+    local_adaptation:
+      corpus: "1,638 Narrative-Discourse synopses: 819 human and 819 GPT"
+      reason: "Full StoryScope story text is not bundled locally, while the prior project's balanced human/GPT corpus is available and reproducible."
+      proxy_metrics:
+        - "retrospective marker presence and occurrences per 100 sentences"
+        - "explicit temporal-jump marker presence and occurrences per 100 sentences"
+        - "forward-sequence marker presence and occurrences per 100 sentences"
+        - "forward share among forward plus retrospective markers"
+      uncertainty: "Stratified bootstrap 95% confidence intervals for human-minus-GPT mean differences and Cohen's d."
+      validity_warning: "This is a deterministic lexical chronology proxy, not a reproduction of StoryScope's 304-feature classifier and not proof that a story is globally linear."
+
+  no_universal_courtesy:
+    title: "No Universal Courtesy: A Cross-Linguistic, Multi-Model Study of Politeness Effects on LLMs Using the PLUM Corpus"
+    url: "https://arxiv.org/abs/2604.16275"
+    local_pdf: "papers/no_universal_courtesy.pdf"
+    local_text: "papers/no_universal_courtesy.txt"
+    dataset: "https://huggingface.co/datasets/plumdataset/plum"
+    local_dataset:
+      english: "../data/plum/english/Category1.txt .. Category5.txt"
+      hindi: "../data/plum/hindi/Category1.txt .. Category5.txt"
+      categories:
+        Category1: "positive politeness (POP)"
+        Category2: "negative politeness / deference and indirectness (NEP)"
+        Category3: "positive impoliteness (POI)"
+        Category4: "negative impoliteness (NEI)"
+        Category5: "bald-on-record/direct (BAL)"
+    reported_evidence:
+      descriptive: "Hindi's best-performing style was negative politeness (deferential and indirect)."
+      inferential: "For Hindi, category F(4,60)=0.873, p=0.485, eta-squared=0.052; history p=0.392; interaction p=0.990."
+      interpretation: "The study does not establish that Hindi responses are inherently more polite; effects vary by language, model, category, task, and history."
+    local_adaptation:
+      design: "3 matched tasks x 2 languages (English/Hindi) x 2 prompt tones (direct/deferential), one fixed local model and seed schedule"
+      response_proxies:
+        - "request softeners"
+        - "gratitude"
+        - "apology"
+        - "respect/honorific forms"
+        - "hedging/indirectness"
+        - "warmth"
+        - "informal or blunt forms"
+        - "Devanagari compliance for Hindi responses"
+      primary_contrasts:
+        - "Hindi minus English within direct prompts (language-associated contrast)"
+        - "deferential minus direct within each language (prompt-tone contrast)"
+      validity_warning: "Lexical strategies are observable evidence, not a culture-independent total-politeness score. A single local model run is exploratory and does not generalize to all LLMs."
+
+implementation_plan:
+  - file: "src/multistory/linearity.py"
+    responsibility: "Compute story-level markers, aggregate by source, bootstrap contrasts, and write evidence reports."
+  - file: "src/multistory/politeness.py"
+    responsibility: "Score English/Hindi surface politeness strategies and language compliance."
+  - file: "examples/tone_prompts.json"
+    responsibility: "Store the matched factorial prompt set."
+  - file: "src/multistory/tone_experiment.py"
+    responsibility: "Generate/checkpoint responses, score them, calculate contrasts, and write evidence reports."
+  - file: "src/multistory/providers.py"
+    responsibility: "Expose plain-text local generation without story annotation."
+  - file: "src/multistory/cli.py"
+    responsibility: "Expose reproducible linearity and tone commands."
+  - file: "tests/test_linearity.py"
+    responsibility: "Verify chronology marker and aggregation behavior."
+  - file: "tests/test_politeness.py"
+    responsibility: "Verify multilingual strategy detection."
+  - file: "tests/test_tone_experiment.py"
+    responsibility: "Verify the factorial analysis using a deterministic fake provider."
+
+reproduction_commands:
+  linearity: "python main.py linearity --data-dir data --results-dir results"
+  tone: "python main.py tone --model orca-mini:latest --ollama-url http://127.0.0.1:11435 --prompts examples/tone_prompts.json --results-dir results"
+
+captured_results:
+  linearity:
+    story_count: 1638
+    source_counts: {human: 819, gpt: 819}
+    retrospective_story_presence: {human: 0.814, gpt: 0.596, human_minus_gpt: 0.219, bootstrap_95_ci: [0.176, 0.264]}
+    retrospective_per_100_sentences: {human: 6.250, gpt: 3.176, human_minus_gpt: 3.073, bootstrap_95_ci: [2.604, 3.583]}
+    temporal_jump_story_presence: {human: 0.740, gpt: 0.277, human_minus_gpt: 0.463, bootstrap_95_ci: [0.418, 0.507]}
+    temporal_jump_per_100_sentences: {human: 4.267, gpt: 0.942, human_minus_gpt: 3.326, bootstrap_95_ci: [3.042, 3.618]}
+    interpretation: "Both local discontinuity proxies align with StoryScope's reported direction."
+  tone:
+    model: "orca-mini:latest (3B Q4_0, local CPU Ollama)"
+    successful_responses: 12
+    requested_responses: 12
+    english_target_script_ratio: 1.000
+    hindi_target_script_ratio: 0.000
+    ungated_hindi_minus_english_direct_strategy_coverage: -0.167
+    status: "inconclusive because all Hindi-targeted responses were in English"
+    interpretation: "Language-compliance failure prevents a Hindi politeness conclusion; the negative raw contrast is retained only for audit."
+  verification:
+    unit_tests: "29/29 passed"
+    compileall: "passed"
+    git_diff_check: "passed before final documentation update"

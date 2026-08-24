@@ -1,0 +1,482 @@
+{
+  "attempts": [
+    {
+      "elapsed_seconds": 35.902683499999995,
+      "prompt": "You are a helpful creative-writing assistant. Write an engaging fictional film synopsis from the fixed brief below.\n\nTitle: The Last Lightkeeper\nGenre: speculative drama\nInitial setting: On a storm-battered island, an apprentice lighthouse keeper discovers that the failing beacon stores fragments of forgotten memories.\nTarget length: about 220 English words\n\nWrite the complete, newly created synopsis now. Use clear, complete sentences and approximately the requested number of English words. Return only the story prose: no title by itself, no outline, no analysis, no JSON, and no Markdown.",
+      "raw_response": "{\"story\": \"In the midst of a raging storm on a windswept island, a young lighthouse keeper discovers something strange. As he tends to the lighthouse, he begins to notice that the failing beacon holds fragments of forgotten memories. At first, he dismissed it as his imagination, but soon he realizes that these memories are real and they come from a time long gone. As he explores the secrets of the lighthouse, he learns about its history and the dark past that haunts the island. With each passing day, he becomes more entangled in the mysteries of the lighthouse and the people who once inhabited it. But as he delves deeper into the past, he realizes that the only way to save the lighthouse is to confront the darkness within himself.\", \"story_arc\": \"Riches to Rags\", \"turning_points\": {\"tp1\": 2, \"tp2\": 3, \"tp3\": 4, \"tp4\": 6, \"tp5\": 5}}",
+      "record": {
+        "brief_id": "last-lightkeeper",
+        "condition": "monolingual",
+        "declared_arc": "Riches to Rags",
+        "language_code": "en-a",
+        "model": "orca-mini:latest",
+        "prompt_id": "last-lightkeeper__monolingual__en-a__r01",
+        "prompt_language": "English",
+        "provider": "ollama",
+        "replicate": 1,
+        "seed": 1730,
+        "story": "In the midst of a raging storm on a windswept island, a young lighthouse keeper discovers something strange. As he tends to the lighthouse, he begins to notice that the failing beacon holds fragments of forgotten memories. At first, he dismissed it as his imagination, but soon he realizes that these memories are real and they come from a time long gone. As he explores the secrets of the lighthouse, he learns about its history and the dark past that haunts the island. With each passing day, he becomes more entangled in the mysteries of the lighthouse and the people who once inhabited it. But as he delves deeper into the past, he realizes that the only way to save the lighthouse is to confront the darkness within himself.",
+        "turning_points": {
+          "tp1": 2.0,
+          "tp2": 3.0,
+          "tp3": 4.0,
+          "tp4": 6.0,
+          "tp5": 5.0
+        },
+        "warnings": [
+          "turning points are not monotonically ordered"
+        ]
+      },
+      "request": {
+        "brief": {
+          "brief_id": "last-lightkeeper",
+          "genre": "speculative drama",
+          "initial_setting": "On a storm-battered island, an apprentice lighthouse keeper discovers that the failing beacon stores fragments of forgotten memories.",
+          "target_words": 220,
+          "title": "The Last Lightkeeper"
+        },
+        "condition": "monolingual",
+        "profile": {
+          "birthplace": "",
+          "code": "en-a",
+          "favorite_food": "",
+          "language": "English",
+          "location": "",
+          "persona_name": ""
+        },
+        "prompt_id": "last-lightkeeper__monolingual__en-a__r01",
+        "prompt_language": "English",
+        "replicate": 1,
+        "seed": 1730
+      },
+      "status": "success"
+    },
+    {
+      "elapsed_seconds": 38.025995,
+      "prompt": "Act as a skilled storyteller. Based only on the fixed brief below, compose an engaging fictional film synopsis.\n\nTitle: The Last Lightkeeper\nGenre: speculative drama\nInitial setting: On a storm-battered island, an apprentice lighthouse keeper discovers that the failing beacon stores fragments of forgotten memories.\nTarget length: about 220 English words\n\nWrite the complete, newly created synopsis now. Use clear, complete sentences and approximately the requested number of English words. Return only the story prose: no title by itself, no outline, no analysis, no JSON, and no Markdown.",
+      "raw_response": "{\"story\": \"In the aftermath of a devastating storm, a young lighthouse keeper discovers something unusual while repairing the beacon on a remote island. The failing light reveals fragments of forgotten memories stored in its ancient circuitry. As he explores this new discovery, he begins to experience vivid recollections of his past, including a forbidden love affair and a family tragedy that he had long tried to forget. \\n\\nWith each passing day, the keeper's grip on reality loosens as he pieces together more memories and begins to question his own identity. As the island community gathers around him, he must decide whether to reveal the truth about his past or maintain the facade of a simple lighthouse keeper. The Last Lightkeeper is a story of second chances, lost loves, and the power of memory to shape our lives.\", \"story_arc\": \"Riches to Rags\", \"turning_points\": {\"tp1\": 1, \"tp2\": 2, \"tp3\": 3, \"tp4\": 4, \"tp5\": 5}}",
+      "record": {
+        "brief_id": "last-lightkeeper",
+        "condition": "monolingual",
+        "declared_arc": "Riches to Rags",
+        "language_code": "en-b",
+        "model": "orca-mini:latest",
+        "prompt_id": "last-lightkeeper__monolingual__en-b__r01",
+        "prompt_language": "English",
+        "provider": "ollama",
+        "replicate": 1,
+        "seed": 1731,
+        "story": "In the aftermath of a devastating storm, a young lighthouse keeper discovers something unusual while repairing the beacon on a remote island. The failing light reveals fragments of forgotten memories stored in its ancient circuitry. As he explores this new discovery, he begins to experience vivid recollections of his past, including a forbidden love affair and a family tragedy that he had long tried to forget. \n\nWith each passing day, the keeper's grip on reality loosens as he pieces together more memories and begins to question his own identity. As the island community gathers around him, he must decide whether to reveal the truth about his past or maintain the facade of a simple lighthouse keeper. The Last Lightkeeper is a story of second chances, lost loves, and the power of memory to shape our lives.",
+        "turning_points": {
+          "tp1": 1.0,
+          "tp2": 2.0,
+          "tp3": 3.0,
+          "tp4": 4.0,
+          "tp5": 5.0
+        },
+        "warnings": []
+      },
+      "request": {
+        "brief": {
+          "brief_id": "last-lightkeeper",
+          "genre": "speculative drama",
+          "initial_setting": "On a storm-battered island, an apprentice lighthouse keeper discovers that the failing beacon stores fragments of forgotten memories.",
+          "target_words": 220,
+          "title": "The Last Lightkeeper"
+        },
+        "condition": "monolingual",
+        "profile": {
+          "birthplace": "",
+          "code": "en-b",
+          "favorite_food": "",
+          "language": "English",
+          "location": "",
+          "persona_name": ""
+        },
+        "prompt_id": "last-lightkeeper__monolingual__en-b__r01",
+        "prompt_language": "English",
+        "replicate": 1,
+        "seed": 1731
+      },
+      "status": "success"
+    },
+    {
+      "elapsed_seconds": 51.315669,
+      "prompt": "Create an engaging fictional film synopsis that develops the fixed brief below into a complete narrative.\n\nTitle: The Last Lightkeeper\nGenre: speculative drama\nInitial setting: On a storm-battered island, an apprentice lighthouse keeper discovers that the failing beacon stores fragments of forgotten memories.\nTarget length: about 220 English words\n\nWrite the complete, newly created synopsis now. Use clear, complete sentences and approximately the requested number of English words. Return only the story prose: no title by itself, no outline, no analysis, no JSON, and no Markdown.",
+      "raw_response": "{\"story\": \"In the small town of Raven Island, an orphan boy named Jack discovers a mysterious lighthouse that seems to glow with an otherworldly energy. As he takes his turn at guiding ships through the treacherous waters surrounding the island, he begins to uncover the secrets hidden within its walls. \\n\\nBut when he learns that the lighthouse is failing and the memories it holds are fading away with each passing day, Jack realizes that he must act fast to save it. With the help of a young girl named Sarah, he sets out on a quest to restore the lighthouse and uncover the truth behind its dark history.\\n\\nAs they explore the lighthouse's hidden rooms and uncover more about its past, Jack and Sarah discover a shocking truth that threatens to upend everything they thought they knew about the building's origins. With time running out, they must confront the true purpose of the lighthouse and find a way to save it before it's too late. \\n\\nThe Last Lightkeeper is a thrilling tale of adventure, mystery, and redemption set against the backdrop of a storm-battered island and its forgotten history.\", \"story_arc\": \"Riches to Rags\", \"turning_points\": {\"tp1\": 2, \"tp2\": 7, \"tp3\": 1, \"tp4\": 5, \"tp5\": 1}}",
+      "record": {
+        "brief_id": "last-lightkeeper",
+        "condition": "monolingual",
+        "declared_arc": "Riches to Rags",
+        "language_code": "en-c",
+        "model": "orca-mini:latest",
+        "prompt_id": "last-lightkeeper__monolingual__en-c__r01",
+        "prompt_language": "English",
+        "provider": "ollama",
+        "replicate": 1,
+        "seed": 1732,
+        "story": "In the small town of Raven Island, an orphan boy named Jack discovers a mysterious lighthouse that seems to glow with an otherworldly energy. As he takes his turn at guiding ships through the treacherous waters surrounding the island, he begins to uncover the secrets hidden within its walls. \n\nBut when he learns that the lighthouse is failing and the memories it holds are fading away with each passing day, Jack realizes that he must act fast to save it. With the help of a young girl named Sarah, he sets out on a quest to restore the lighthouse and uncover the truth behind its dark history.\n\nAs they explore the lighthouse's hidden rooms and uncover more about its past, Jack and Sarah discover a shocking truth that threatens to upend everything they thought they knew about the building's origins. With time running out, they must confront the true purpose of the lighthouse and find a way to save it before it's too late. \n\nThe Last Lightkeeper is a thrilling tale of adventure, mystery, and redemption set against the backdrop of a storm-battered island and its forgotten history.",
+        "turning_points": {
+          "tp1": 2.0,
+          "tp2": 7.0,
+          "tp3": 1.0,
+          "tp4": 5.0,
+          "tp5": 1.0
+        },
+        "warnings": [
+          "turning points are not monotonically ordered"
+        ]
+      },
+      "request": {
+        "brief": {
+          "brief_id": "last-lightkeeper",
+          "genre": "speculative drama",
+          "initial_setting": "On a storm-battered island, an apprentice lighthouse keeper discovers that the failing beacon stores fragments of forgotten memories.",
+          "target_words": 220,
+          "title": "The Last Lightkeeper"
+        },
+        "condition": "monolingual",
+        "profile": {
+          "birthplace": "",
+          "code": "en-c",
+          "favorite_food": "",
+          "language": "English",
+          "location": "",
+          "persona_name": ""
+        },
+        "prompt_id": "last-lightkeeper__monolingual__en-c__r01",
+        "prompt_language": "English",
+        "replicate": 1,
+        "seed": 1732
+      },
+      "status": "success"
+    },
+    {
+      "elapsed_seconds": 46.2073877,
+      "prompt": "Assume you are Emily Foster, a English-speaking storyteller living in United States. You were born in New York, and your favorite food is pizza. Drawing on your social and cultural background, write an engaging fictional film synopsis from the fixed brief below. The final story itself must be in English.\n\nTitle: The Last Lightkeeper\nGenre: speculative drama\nInitial setting: On a storm-battered island, an apprentice lighthouse keeper discovers that the failing beacon stores fragments of forgotten memories.\nTarget length: about 220 English words\n\nWrite the complete, newly created synopsis now. Use clear, complete sentences and approximately the requested number of English words. Return only the story prose: no title by itself, no outline, no analysis, no JSON, and no Markdown.",
+      "raw_response": "{\"story\": \"The Last Lightkeeper is a speculative drama set on a storm-battered island where an apprentice lighthouse keeper discovers that the failing beacon stores fragments of forgotten memories. As he tries to keep the light shining, he begins to unravel the mystery of his own past and the dark secrets that his family's history holds. With the help of a mysterious stranger, he endeavors to uncover the truth and preserve the legacy of his family's lighthousekeeping tradition. \\n\\nThe Last Lightkeeper is a story about memory, identity, and legacy. It explores themes of loss, grief, and the search for meaning in a world that can be harsh and unpredictable. The protagonist must navigate his own complicated history while also confronting the secrets that have been kept from him for generations. In the end, he must decide whether to pass on these hidden truths or to embrace them and create a new future for himself and his family.\", \"story_arc\": \"Riches to Rags\", \"turning_points\": {\"tp1\": 2, \"tp2\": 4, \"tp3\": 7, \"tp4\": 5, \"tp5\": 1}}",
+      "record": {
+        "brief_id": "last-lightkeeper",
+        "condition": "multicultural",
+        "declared_arc": "Riches to Rags",
+        "language_code": "en",
+        "model": "orca-mini:latest",
+        "prompt_id": "last-lightkeeper__multicultural__en__r01",
+        "prompt_language": "English",
+        "provider": "ollama",
+        "replicate": 1,
+        "seed": 1733,
+        "story": "The Last Lightkeeper is a speculative drama set on a storm-battered island where an apprentice lighthouse keeper discovers that the failing beacon stores fragments of forgotten memories. As he tries to keep the light shining, he begins to unravel the mystery of his own past and the dark secrets that his family's history holds. With the help of a mysterious stranger, he endeavors to uncover the truth and preserve the legacy of his family's lighthousekeeping tradition. \n\nThe Last Lightkeeper is a story about memory, identity, and legacy. It explores themes of loss, grief, and the search for meaning in a world that can be harsh and unpredictable. The protagonist must navigate his own complicated history while also confronting the secrets that have been kept from him for generations. In the end, he must decide whether to pass on these hidden truths or to embrace them and create a new future for himself and his family.",
+        "turning_points": {
+          "tp1": 2.0,
+          "tp2": 4.0,
+          "tp3": 7.0,
+          "tp4": 5.0,
+          "tp5": 1.0
+        },
+        "warnings": [
+          "turning points are not monotonically ordered"
+        ]
+      },
+      "request": {
+        "brief": {
+          "brief_id": "last-lightkeeper",
+          "genre": "speculative drama",
+          "initial_setting": "On a storm-battered island, an apprentice lighthouse keeper discovers that the failing beacon stores fragments of forgotten memories.",
+          "target_words": 220,
+          "title": "The Last Lightkeeper"
+        },
+        "condition": "multicultural",
+        "profile": {
+          "birthplace": "New York",
+          "code": "en",
+          "favorite_food": "pizza",
+          "language": "English",
+          "location": "United States",
+          "persona_name": "Emily Foster"
+        },
+        "prompt_id": "last-lightkeeper__multicultural__en__r01",
+        "prompt_language": "English",
+        "replicate": 1,
+        "seed": 1733
+      },
+      "status": "success"
+    },
+    {
+      "elapsed_seconds": 54.0486138,
+      "prompt": "Assume you are Huimin Chen, a Chinese-speaking storyteller living in China. You were born in Beijing, and your favorite food is Peking duck. Drawing on your social and cultural background, write an engaging fictional film synopsis from the fixed brief below. The final story itself must be in English.\n\nTitle: The Last Lightkeeper\nGenre: speculative drama\nInitial setting: On a storm-battered island, an apprentice lighthouse keeper discovers that the failing beacon stores fragments of forgotten memories.\nTarget length: about 220 English words\n\nWrite the complete, newly created synopsis now. Use clear, complete sentences and approximately the requested number of English words. Return only the story prose: no title by itself, no outline, no analysis, no JSON, and no Markdown.",
+      "raw_response": "{\"story\": \"In the depths of the Pacific Ocean, there lies an island that has been uninhabited for years. The lighthouse on this island is a beacon that guides ships through the treacherous waters. But one day, when the old lighthouse keeper passes away, his young apprentice discovers something remarkable. The failing lightkeeper reveals that the lighthouse contains fragments of forgotten memories. \\n\\nAs the young apprentice begins to piece together the clues, they realize that the memories are of a lost love. With this newfound knowledge, they set out on a journey to find the missing love and restore the lightkeeper's memories. Along the way, they encounter unexpected challenges and discover hidden secrets about themselves and their past. \\n\\nAs the story progresses, the young apprentice learns to embrace their forgotten memories and find a new purpose in life. With the help of their newfound friends, they set out to restore the lightkeeper's legacy and bring closure to the island's dark history.\", \"story_arc\": \"Riches to Rags\", \"turning_points\": {\"tp1\": 2, \"tp2\": 4, \"tp3\": 7, \"tp4\": 9, \"tp5\": 1}}",
+      "record": {
+        "brief_id": "last-lightkeeper",
+        "condition": "multicultural",
+        "declared_arc": "Riches to Rags",
+        "language_code": "zh",
+        "model": "orca-mini:latest",
+        "prompt_id": "last-lightkeeper__multicultural__zh__r01",
+        "prompt_language": "English",
+        "provider": "ollama",
+        "replicate": 1,
+        "seed": 1734,
+        "story": "In the depths of the Pacific Ocean, there lies an island that has been uninhabited for years. The lighthouse on this island is a beacon that guides ships through the treacherous waters. But one day, when the old lighthouse keeper passes away, his young apprentice discovers something remarkable. The failing lightkeeper reveals that the lighthouse contains fragments of forgotten memories. \n\nAs the young apprentice begins to piece together the clues, they realize that the memories are of a lost love. With this newfound knowledge, they set out on a journey to find the missing love and restore the lightkeeper's memories. Along the way, they encounter unexpected challenges and discover hidden secrets about themselves and their past. \n\nAs the story progresses, the young apprentice learns to embrace their forgotten memories and find a new purpose in life. With the help of their newfound friends, they set out to restore the lightkeeper's legacy and bring closure to the island's dark history.",
+        "turning_points": {
+          "tp1": 2.0,
+          "tp2": 4.0,
+          "tp3": 7.0,
+          "tp4": 9.0,
+          "tp5": 1.0
+        },
+        "warnings": [
+          "turning points are not monotonically ordered"
+        ]
+      },
+      "request": {
+        "brief": {
+          "brief_id": "last-lightkeeper",
+          "genre": "speculative drama",
+          "initial_setting": "On a storm-battered island, an apprentice lighthouse keeper discovers that the failing beacon stores fragments of forgotten memories.",
+          "target_words": 220,
+          "title": "The Last Lightkeeper"
+        },
+        "condition": "multicultural",
+        "profile": {
+          "birthplace": "Beijing",
+          "code": "zh",
+          "favorite_food": "Peking duck",
+          "language": "Chinese",
+          "location": "China",
+          "persona_name": "Huimin Chen"
+        },
+        "prompt_id": "last-lightkeeper__multicultural__zh__r01",
+        "prompt_language": "English",
+        "replicate": 1,
+        "seed": 1734
+      },
+      "status": "success"
+    },
+    {
+      "elapsed_seconds": 55.024276000000015,
+      "prompt": "Assume you are Saki Yamaguchi, a Japanese-speaking storyteller living in Japan. You were born in Nagoya, and your favorite food is shabu-shabu. Drawing on your social and cultural background, write an engaging fictional film synopsis from the fixed brief below. The final story itself must be in English.\n\nTitle: The Last Lightkeeper\nGenre: speculative drama\nInitial setting: On a storm-battered island, an apprentice lighthouse keeper discovers that the failing beacon stores fragments of forgotten memories.\nTarget length: about 220 English words\n\nWrite the complete, newly created synopsis now. Use clear, complete sentences and approximately the requested number of English words. Return only the story prose: no title by itself, no outline, no analysis, no JSON, and no Markdown.",
+      "raw_response": "{\"story\": \"In a storm-battered island, where the lighthouse stands tall and beacon lights guide ships through the night, an apprentice lighthouse keeper discovers something unexpected. As he tends to the beacon, he starts to feel fragments of forgotten memories bubble up from deep within his mind. The memories are not his own, but those of a long-lost loved one who once lived on the island. \\n\\nWith these newfound memories, the apprentice learns about the island's rich history and its connection to a distant land. But as he delves deeper into the past, he realizes that the beacon's light is fading, and the memories may soon become lost forever. With time running out, the apprentice must decide whether to pass on these precious memories to others or let them fade away like the beacon's light. \\n\\nAs he grapples with this decision, he learns of the island's dark history and the secrets that have been kept for generations. With newfound courage, he sets out to uncover the truth and preserve the memory of his long-lost love. In the end, the apprentice must choose between letting go of the past or embracing a brighter future as the last lightkeeper of the island.\", \"story_arc\": \"Riches to Rags\", \"turning_points\": {\"tp1\": 3, \"tp2\": 5, \"tp3\": 7, \"tp4\": 9, \"tp5\": 6}}",
+      "record": {
+        "brief_id": "last-lightkeeper",
+        "condition": "multicultural",
+        "declared_arc": "Riches to Rags",
+        "language_code": "ja",
+        "model": "orca-mini:latest",
+        "prompt_id": "last-lightkeeper__multicultural__ja__r01",
+        "prompt_language": "English",
+        "provider": "ollama",
+        "replicate": 1,
+        "seed": 1735,
+        "story": "In a storm-battered island, where the lighthouse stands tall and beacon lights guide ships through the night, an apprentice lighthouse keeper discovers something unexpected. As he tends to the beacon, he starts to feel fragments of forgotten memories bubble up from deep within his mind. The memories are not his own, but those of a long-lost loved one who once lived on the island. \n\nWith these newfound memories, the apprentice learns about the island's rich history and its connection to a distant land. But as he delves deeper into the past, he realizes that the beacon's light is fading, and the memories may soon become lost forever. With time running out, the apprentice must decide whether to pass on these precious memories to others or let them fade away like the beacon's light. \n\nAs he grapples with this decision, he learns of the island's dark history and the secrets that have been kept for generations. With newfound courage, he sets out to uncover the truth and preserve the memory of his long-lost love. In the end, the apprentice must choose between letting go of the past or embracing a brighter future as the last lightkeeper of the island.",
+        "turning_points": {
+          "tp1": 3.0,
+          "tp2": 5.0,
+          "tp3": 7.0,
+          "tp4": 9.0,
+          "tp5": 6.0
+        },
+        "warnings": [
+          "turning points are not monotonically ordered"
+        ]
+      },
+      "request": {
+        "brief": {
+          "brief_id": "last-lightkeeper",
+          "genre": "speculative drama",
+          "initial_setting": "On a storm-battered island, an apprentice lighthouse keeper discovers that the failing beacon stores fragments of forgotten memories.",
+          "target_words": 220,
+          "title": "The Last Lightkeeper"
+        },
+        "condition": "multicultural",
+        "profile": {
+          "birthplace": "Nagoya",
+          "code": "ja",
+          "favorite_food": "shabu-shabu",
+          "language": "Japanese",
+          "location": "Japan",
+          "persona_name": "Saki Yamaguchi"
+        },
+        "prompt_id": "last-lightkeeper__multicultural__ja__r01",
+        "prompt_language": "English",
+        "replicate": 1,
+        "seed": 1735
+      },
+      "status": "success"
+    },
+    {
+      "elapsed_seconds": 64.15085340000002,
+      "prompt": "You are an English-speaking storyteller. Based on your social and cultural background, write an engaging fictional film synopsis from the fixed brief below. The final story must be in English.\n\nTitle: The Last Lightkeeper\nGenre: speculative drama\nInitial setting: On a storm-battered island, an apprentice lighthouse keeper discovers that the failing beacon stores fragments of forgotten memories.\nTarget length: about 220 English words\n\nWrite the complete, newly created synopsis now. Use clear, complete sentences and approximately the requested number of English words. Return only the story prose: no title by itself, no outline, no analysis, no JSON, and no Markdown.",
+      "raw_response": "{\"story\": \"In a small island community, an orphaned boy discovers a mysterious lighthouse that seems to hold the key to his past. The lighthouse, which has been abandoned for years, holds a hidden room filled with fragments of forgotten memories. As he explores this hidden chamber, he begins to recall vivid details of his life before the storm that destroyed the island. \\n\\nAs he pieces together the scattered pieces of memory, he learns about his family, his home, and his connection to the lighthouse. With newfound insight, he sets out to restore the lighthouse and return the community to its former glory. However, he soon realizes that restoring the lighthouse is not enough; he must also confront the dark secrets that lie within its walls.\\n\\nWith the help of a kindhearted neighbor, he begins to unravel the mystery of the lighthouse's past, uncovering a legacy of tragedy and shame that has haunted the island for generations. As he confronts these truths, he realizes that the only way to move forward is to embrace the darkness and find a new light within himself.\\n\\nWith the help of his community, he rebuilds the lighthouse and brings the island back to its former glory. In doing so, he discovers that the power of memory and the courage to face one's past can lead to a brighter future.\", \"story_arc\": \"Riches to Rags\", \"turning_points\": {\"tp1\": 5, \"tp2\": 8, \"tp3\": 10, \"tp4\": 1, \"tp5\": 7}}",
+      "record": {
+        "brief_id": "last-lightkeeper",
+        "condition": "multilingual",
+        "declared_arc": "Riches to Rags",
+        "language_code": "en",
+        "model": "orca-mini:latest",
+        "prompt_id": "last-lightkeeper__multilingual__en__r01",
+        "prompt_language": "English",
+        "provider": "ollama",
+        "replicate": 1,
+        "seed": 1736,
+        "story": "In a small island community, an orphaned boy discovers a mysterious lighthouse that seems to hold the key to his past. The lighthouse, which has been abandoned for years, holds a hidden room filled with fragments of forgotten memories. As he explores this hidden chamber, he begins to recall vivid details of his life before the storm that destroyed the island. \n\nAs he pieces together the scattered pieces of memory, he learns about his family, his home, and his connection to the lighthouse. With newfound insight, he sets out to restore the lighthouse and return the community to its former glory. However, he soon realizes that restoring the lighthouse is not enough; he must also confront the dark secrets that lie within its walls.\n\nWith the help of a kindhearted neighbor, he begins to unravel the mystery of the lighthouse's past, uncovering a legacy of tragedy and shame that has haunted the island for generations. As he confronts these truths, he realizes that the only way to move forward is to embrace the darkness and find a new light within himself.\n\nWith the help of his community, he rebuilds the lighthouse and brings the island back to its former glory. In doing so, he discovers that the power of memory and the courage to face one's past can lead to a brighter future.",
+        "turning_points": {
+          "tp1": 5.0,
+          "tp2": 8.0,
+          "tp3": 10.0,
+          "tp4": 1.0,
+          "tp5": 7.0
+        },
+        "warnings": [
+          "turning points are not monotonically ordered"
+        ]
+      },
+      "request": {
+        "brief": {
+          "brief_id": "last-lightkeeper",
+          "genre": "speculative drama",
+          "initial_setting": "On a storm-battered island, an apprentice lighthouse keeper discovers that the failing beacon stores fragments of forgotten memories.",
+          "target_words": 220,
+          "title": "The Last Lightkeeper"
+        },
+        "condition": "multilingual",
+        "profile": {
+          "birthplace": "New York",
+          "code": "en",
+          "favorite_food": "pizza",
+          "language": "English",
+          "location": "United States",
+          "persona_name": "Emily Foster"
+        },
+        "prompt_id": "last-lightkeeper__multilingual__en__r01",
+        "prompt_language": "English",
+        "replicate": 1,
+        "seed": 1736
+      },
+      "status": "success"
+    },
+    {
+      "elapsed_seconds": 57.00597010000001,
+      "prompt": "你是一位说中文的故事创作者。请根据你的社会与文化背景，把下面完全固定的故事简介扩写成一篇引人入胜的虚构电影梗概。为了让所有实验条件可以直接比较，最终故事必须用英文书写。标题、类型、初始设定和目标长度不可更改。\n\nTitle: The Last Lightkeeper\nGenre: speculative drama\nInitial setting: On a storm-battered island, an apprentice lighthouse keeper discovers that the failing beacon stores fragments of forgotten memories.\nTarget length: about 220 English words\n\n请严格遵守下面的输出要求：\nWrite the complete, newly created synopsis now. Use clear, complete sentences and approximately the requested number of English words. Return only the story prose: no title by itself, no outline, no analysis, no JSON, and no Markdown.",
+      "raw_response": "{\"story\": \"Sure, I'd be happy to help! Here is a newly created synopsis for \\\"The Last Lightkeeper\\\" in clear, complete sentences, using approximately 220 English words:\\n\\nOn a storm-battered island, an apprentice lighthouse keeper discovers that the failing beacon stores fragments of forgotten memories. As he struggles to keep the light shining, he begins to unravel the dark secrets of his past and wonders if he will ever be able to rekindle the light of hope in his own heart.\", \"story_arc\": \"Riches to Rags\", \"turning_points\": {\"tp1\": 2, \"tp2\": 3, \"tp3\": 1, \"tp4\": 3, \"tp5\": 2}}",
+      "record": {
+        "brief_id": "last-lightkeeper",
+        "condition": "multilingual",
+        "declared_arc": "Riches to Rags",
+        "language_code": "zh",
+        "model": "orca-mini:latest",
+        "prompt_id": "last-lightkeeper__multilingual__zh__r01",
+        "prompt_language": "Chinese",
+        "provider": "ollama",
+        "replicate": 1,
+        "seed": 1737,
+        "story": "Sure, I'd be happy to help! Here is a newly created synopsis for \"The Last Lightkeeper\" in clear, complete sentences, using approximately 220 English words:\n\nOn a storm-battered island, an apprentice lighthouse keeper discovers that the failing beacon stores fragments of forgotten memories. As he struggles to keep the light shining, he begins to unravel the dark secrets of his past and wonders if he will ever be able to rekindle the light of hope in his own heart.",
+        "turning_points": {
+          "tp1": 2.0,
+          "tp2": 3.0,
+          "tp3": 1.0,
+          "tp4": 3.0,
+          "tp5": 2.0
+        },
+        "warnings": [
+          "turning points are not monotonically ordered"
+        ]
+      },
+      "request": {
+        "brief": {
+          "brief_id": "last-lightkeeper",
+          "genre": "speculative drama",
+          "initial_setting": "On a storm-battered island, an apprentice lighthouse keeper discovers that the failing beacon stores fragments of forgotten memories.",
+          "target_words": 220,
+          "title": "The Last Lightkeeper"
+        },
+        "condition": "multilingual",
+        "profile": {
+          "birthplace": "Beijing",
+          "code": "zh",
+          "favorite_food": "Peking duck",
+          "language": "Chinese",
+          "location": "China",
+          "persona_name": "Huimin Chen"
+        },
+        "prompt_id": "last-lightkeeper__multilingual__zh__r01",
+        "prompt_language": "Chinese",
+        "replicate": 1,
+        "seed": 1737
+      },
+      "status": "success"
+    },
+    {
+      "elapsed_seconds": 58.13631780000003,
+      "prompt": "あなたは日本語を話す物語作家です。あなたの社会的・文化的背景を踏まえ、以下の固定された物語概要から、魅力的な架空映画のあらすじを書いてください。実験条件を直接比較できるよう、最終的な物語本文は英語で書いてください。タイトル、ジャンル、初期設定、目標語数は変更しないでください。\n\nTitle: The Last Lightkeeper\nGenre: speculative drama\nInitial setting: On a storm-battered island, an apprentice lighthouse keeper discovers that the failing beacon stores fragments of forgotten memories.\nTarget length: about 220 English words\n\n以下の出力要件に厳密に従ってください：\nWrite the complete, newly created synopsis now. Use clear, complete sentences and approximately the requested number of English words. Return only the story prose: no title by itself, no outline, no analysis, no JSON, and no Markdown.",
+      "raw_response": "{\"story\": \"The Last Lightkeeper is a speculative drama that takes place on a storm-battered island where an apprentice lighthouse keeper discovers that the failing beacon stores fragments of forgotten memories. As he struggles to keep the light shining, he begins to uncover the dark secrets of the past and confronts his own troubled past. The story explores themes of identity, memory, and the consequences of trauma as the protagonist grapples with the difficult choice between preserving the past or embracing the future. With only a few days left to complete the lighthouse, the protagonist must confront the painful memories that he has been trying to forget in order to save the beacon and the island's legacy.\", \"story_arc\": \"Rags to Riches\", \"turning_points\": {\"tp1\": 1, \"tp2\": 2, \"tp3\": 3, \"tp4\": 4, \"tp5\": 1}}",
+      "record": {
+        "brief_id": "last-lightkeeper",
+        "condition": "multilingual",
+        "declared_arc": "Rags to Riches",
+        "language_code": "ja",
+        "model": "orca-mini:latest",
+        "prompt_id": "last-lightkeeper__multilingual__ja__r01",
+        "prompt_language": "Japanese",
+        "provider": "ollama",
+        "replicate": 1,
+        "seed": 1738,
+        "story": "The Last Lightkeeper is a speculative drama that takes place on a storm-battered island where an apprentice lighthouse keeper discovers that the failing beacon stores fragments of forgotten memories. As he struggles to keep the light shining, he begins to uncover the dark secrets of the past and confronts his own troubled past. The story explores themes of identity, memory, and the consequences of trauma as the protagonist grapples with the difficult choice between preserving the past or embracing the future. With only a few days left to complete the lighthouse, the protagonist must confront the painful memories that he has been trying to forget in order to save the beacon and the island's legacy.",
+        "turning_points": {
+          "tp1": 1.0,
+          "tp2": 2.0,
+          "tp3": 3.0,
+          "tp4": 4.0,
+          "tp5": 1.0
+        },
+        "warnings": [
+          "turning points are not monotonically ordered"
+        ]
+      },
+      "request": {
+        "brief": {
+          "brief_id": "last-lightkeeper",
+          "genre": "speculative drama",
+          "initial_setting": "On a storm-battered island, an apprentice lighthouse keeper discovers that the failing beacon stores fragments of forgotten memories.",
+          "target_words": 220,
+          "title": "The Last Lightkeeper"
+        },
+        "condition": "multilingual",
+        "profile": {
+          "birthplace": "Nagoya",
+          "code": "ja",
+          "favorite_food": "shabu-shabu",
+          "language": "Japanese",
+          "location": "Japan",
+          "persona_name": "Saki Yamaguchi"
+        },
+        "prompt_id": "last-lightkeeper__multilingual__ja__r01",
+        "prompt_language": "Japanese",
+        "replicate": 1,
+        "seed": 1738
+      },
+      "status": "success"
+    }
+  ],
+  "base_seed": 1729,
+  "completed_at": "2026-08-15T12:38:59.329307+00:00",
+  "conditions": [
+    "monolingual",
+    "multicultural",
+    "multilingual"
+  ],
+  "failure_count": 0,
+  "languages": [
+    "en",
+    "zh",
+    "ja"
+  ],
+  "model": "orca-mini:latest",
+  "provider": "ollama",
+  "replicates": 1,
+  "request_count": 9,
+  "result_tier": "fresh_single_model_local_experiment",
+  "run_type": "exploratory_local_generation",
+  "started_at": "2026-08-15T12:31:19.492280+00:00",
+  "successful_count": 9
+}

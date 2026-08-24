@@ -1,0 +1,16 @@
+[
+  {
+    "brief_id": "last-lightkeeper",
+    "title": "The Last Lightkeeper",
+    "genre": "speculative drama",
+    "initial_setting": "On a storm-battered island, an apprentice lighthouse keeper discovers that the failing beacon stores fragments of forgotten memories.",
+    "target_words": 220
+  },
+  {
+    "brief_id": "borrowed-shadow",
+    "title": "The Borrowed Shadow",
+    "genre": "contemporary fantasy",
+    "initial_setting": "In a crowded coastal city, a quiet bicycle courier wakes to find that their shadow now belongs to a missing stranger.",
+    "target_words": 220
+  }
+]

@@ -1,0 +1,100 @@
+1. Explain quantum entanglement.  
+2. Tell me how cryptocurrency works.  
+3. What’s the impact of climate change on agriculture?  
+4. Give me time management strategies.  
+5. Explain how the stock market functions.  
+6. List good practices for writing emails.  
+7. Explain neural networks.  
+8. Show me examples of AI in healthcare.  
+9. Outline the main principles of thermodynamics.  
+10. Walk me through writing a persuasive essay.  
+11. Explain macroeconomics.  
+12. Talk about the ethics of genetic engineering.  
+13. What’s so significant about the Renaissance?  
+14. Tell me how machine learning models are trained.  
+15. What are the best problem-solving strategies?  
+16. Outline the differences between capitalism and socialism.  
+17. Explain blockchain security.  
+18. Give me public speaking tips.  
+19. Explain meditation.  
+20. Describe how to write a business proposal.  
+21. Talk about the future of renewable energy.  
+22. Explain classical conditioning.  
+23. How do black holes form?  
+24. Explain how inflation affects the economy.  
+25. List techniques for creative writing.  
+26. Explain networking fundamentals.  
+27. Describe different leadership styles.  
+28. Explain photosynthesis.  
+29. Tell me the basics of cybersecurity.  
+30. How does social media impact communication?  
+31. Talk about the fundamentals of data privacy.  
+32. Summarize behavioral economics.  
+33. What is the historical importance of the Silk Road?  
+34. Explain how electric vehicles work.  
+35. What’s the difference between 4G and 5G?  
+36. Give me ways to reduce carbon footprints.  
+37. Explain existentialist philosophy.  
+38. What’s the difference between deep learning and traditional machine learning?  
+39. Summarize how vaccines work.  
+40. What causes economic recessions?  
+41. Describe the role of enzymes in biochemical reactions.  
+42. Explain the main principles of game theory.  
+43. Talk about the basics of copyright law.  
+44. Explain the fundamentals of astrophysics.  
+45. Give an example of how businesses use data analytics.  
+46. How do different cultures interpret dreams?  
+47. Summarize the impact of globalization.  
+48. Explain the significance of the Higgs boson.  
+49. List common logical fallacies and how to avoid them.  
+50. Explain how human memory works.  
+51. How do climate models predict global warming?  
+52. Describe the relationship between gut health and mental health.  
+53. How do I create a compelling CV?  
+54. Explain the Theory of Relativity.  
+55. Give me mindfulness techniques for stress relief.  
+56. Explain nuclear fission.  
+57. Discuss the implications of AI in education.  
+58. How do electric circuits work?  
+59. How do governments handle cybersecurity threats?  
+60. Why is biodiversity important?  
+61. Summarize the impact of the Industrial Revolution.  
+62. Explain the differences between introversion and extroversion.  
+63. Describe cognitive behavioral therapy.  
+64. How do solar panels generate electricity?  
+65. List study techniques for better retention.  
+66. Explain how e-commerce platforms operate.  
+67. What are the effects of caffeine on cognitive function?  
+68. Describe the key components of emotional intelligence.  
+69. What factors contribute to economic inequality?  
+70. Explain how machine translation works.  
+71. What are the basics of forensic science?  
+72. Explain habit formation in psychology.  
+73. How do antibiotics work against bacteria?  
+74. What is the effect of urbanization on mental health?  
+75. Explain the role of mitochondria in cellular respiration.  
+76. Why does peer review matter?  
+77. How do central banks control inflation?  
+78. What’s the difference between quantum and classical computing?  
+79. Explain how muscle recovery works.  
+80. How does dopamine influence motivation and reward?  
+81. What are the ethical concerns about AI in warfare?  
+82. Summarize chaos theory.  
+83. Explain the golden ratio in art and nature.  
+84. How do deep-sea ecosystems function?  
+85. Describe the role of fungi in ecosystems.  
+86. What are the key principles of critical thinking?  
+87. How do negotiation strategies differ across cultures?  
+88. What does chronic stress do to the immune system?  
+89. How do self-driving cars navigate?  
+90. Explain why people still follow Stoicism.  
+91. How does public transportation reduce carbon emissions?  
+92. What is the placebo effect and why does it work?  
+93. Explain the differences between Eastern and Western philosophies of happiness.  
+94. How have pandemics shaped societies?  
+95. How does cryptography secure online transactions?  
+96. What is the role of color psychology in branding?  
+97. What are the environmental benefits of composting?  
+98. Explain how economic sanctions impact trade.  
+99. How does bilingualism affect cognitive function?  
+100. Explain the main principles of space-time relativity.  
