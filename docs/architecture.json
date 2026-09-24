@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Story Tone Lab — Analysis Architecture",
+    "quality_profile": "showcase",
+    "viewBox": [1200, 680]
+  },
+  "components": [
+    {"id":"papers","type":"external","label":"Research sources","sublabel":"Four source papers","pos":[40,260],"size":[160,70]},
+    {"id":"corpus","type":"database","label":"Local datasets","sublabel":"Narrative + PLUM","pos":[270,260],"size":[160,70]},
+    {"id":"baseline","type":"backend","label":"Baseline analysis","sublabel":"Arcs, turning points, diversity","pos":[510,170],"size":[165,70]},
+    {"id":"generation","type":"backend","label":"Generation runner","sublabel":"Matched prompts + checkpoints","pos":[510,350],"size":[165,70]},
+    {"id":"ollama","type":"external","label":"Local Ollama model","sublabel":"Optional story generation","pos":[510,510],"size":[165,70]},
+    {"id":"metrics","type":"backend","label":"Evidence analyzers","sublabel":"Linearity, tone, validity gates","pos":[760,260],"size":[175,70]},
+    {"id":"results","type":"database","label":"Captured evidence","sublabel":"JSON + Markdown reports","pos":[1000,260],"size":[165,70]}
+  ],
+  "connections": [
+    {"from":"papers","to":"corpus","variant":"emphasis"},
+    {"from":"corpus","to":"baseline"},
+    {"from":"corpus","to":"generation"},
+    {"from":"ollama","to":"generation"},
+    {"from":"baseline","to":"metrics"},
+    {"from":"generation","to":"metrics"},
+    {"from":"metrics","to":"results","variant":"emphasis"}
+  ],
+  "cards": [
+    {"dot":"cyan","title":"Inputs","items":["Published research informs operational proxies","Local datasets preserve source records"]},
+    {"dot":"emerald","title":"Analysis","items":["Baseline and generation paths remain separate","Validity gates prevent unsupported language claims"]},
+    {"dot":"violet","title":"Outputs","items":["Raw artifacts and rendered reports are retained","Evidence dashboard exposes the captured results"]}
+  ]
+}
