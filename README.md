@@ -183,3 +183,19 @@ This is a synthesis and extension, not an experiment claimed by either source pa
 - The response-tone detector measures overt lexical strategies. It does not measure prosody, sincerity, indirect pragmatic meaning, regional variation, or total politeness.
 
 For publication-quality evidence, expand briefs, seeds, models, and languages; add independent blinded annotators; use a full licensed VAD resource; preregister inferential tests; and evaluate native-language prose without collapsing cultural differences into a ranking of languages.
+
+## Evidence report
+
+The complete Story Tone Lab storyline, experiment explorer, captured artifacts, architecture diagram, and interpretation boundaries are published in the shared RProjects site:
+
+- **Live report:** https://raghav-projects.raghav-codes.chatgpt.site/
+- **Interactive architecture:** https://raghav-projects.raghav-codes.chatgpt.site/story-tone-architecture.html
+
+### Published headline results
+
+- The evidence dashboard covers **1,638 stories**, **9 story calls + 12 tone calls**, **35/35 verification checks**, and **1,000 archived PLUM prompts**.
+- Human synopses show more retrospective cues and explicit time jumps than GPT synopses, with the reported bootstrap intervals and effect sizes shown in the result explorer.
+- The Hindi-tone comparison is correctly marked **inconclusive**: all Hindi-targeted responses in the checked-in local run were written in English, giving a target-script ratio of **0.000**.
+- The updated storytelling run reports multilingual arc entropy **0.5794** and neutral plot-repeat rate **0.4444**, while clearly flagging the tiny sample and neutral-only parameter limitation.
+
+The live report links the raw JSON/Markdown evidence files from this repository and keeps lexical proxies, compliance gates, and exploratory observations separate from universal claims.
